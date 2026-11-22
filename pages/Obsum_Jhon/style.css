@@ -1,0 +1,396 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* To set the Georgia serif font for the whole page, with space between lines (line-height),
+   a gray background, black text, and no default margin around the page */
+body {
+  font-family: Georgia, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+  line-height: 1.7;
+  background-color: #8c8c8c;
+  color: #000000;
+  margin: 0;
+}
+
+h1 {
+  color: #000000;
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* To style the top bar with a light gray background, centered text, and a black line
+   along the bottom with a thin dark gray line under it, like a letterhead */
+header {
+  background-color: #b9b9b9;
+  color: #000000;
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0 3px 0 #b9b9b9, 0 4px 0 #505050;
+}
+
+header, footer {
+  padding: 10px;
+}
+
+ol {
+  padding-left: 25px;
+}
+
+ol li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+ol li::marker {
+  color: #505050;
+  font-weight: bold;
+}
+
+/* To let the table scroll sideways on a small phone instead of breaking the page. The table
+   fills the full width, border-collapse merges the borders into single lines, header cells (th)
+   get a dark background, and a row lights up when the mouse is over it (hover) */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #8c8c8c;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #505050;
+  color: #e8e8e8;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+tbody tr:hover {
+  background-color: #b9b9b9;
+}
+
+header p {
+  color: #000000;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+header .sum-up {
+  color: #000000;
+}
+
+.back-home {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Used Flexbox to put the menu links in one centered row. flex-wrap lets them drop to the
+   next line on a small screen, gap sets the space between links, and the bullets are removed */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 35px;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* To make all links black, and turn them dark gray when the mouse is over them (hover effect) */
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: #505050;
+}
+
+/* To keep every picture from being wider than the box it sits in,
+   so nothing scrolls sideways on a phone */
+img {
+  max-width: 100%;
+}
+
+/* To make each section a light gray card: padding spaces the text inside, max-width stops it
+   from getting too wide, and margin auto centers it. The border and box-shadow make it look raised */
+section {
+  background-color: #e8e8e8;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 800px;
+  border: 1px solid #505050;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #8c8c8c;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+/* Used Flexbox to put the photo and the text side by side. flex-wrap moves the
+   text under the photo when the screen is narrow */
+.about-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-flex img {
+  flex-shrink: 0;
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #505050;
+  max-width: 100%;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-text p {
+  margin: 0 0 10px 0;
+}
+
+.sum-up {
+  color: #505050;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #505050;
+}
+
+/* Used CSS Grid to make as many columns of at least 150px as will fit (auto-fit), so the
+   picture cards wrap on smaller screens. gap spaces the cards apart */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.hobby-card {
+  text-align: center;
+}
+
+.hobby-card img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: 35% center;
+  border: 3px solid #505050;
+  border-radius: 2px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hobby-card img:hover {
+  border-color: #8c8c8c;
+}
+
+.hobby-card h3 {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+}
+
+.sub-heading {
+  margin: 30px 0 0 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Used another Grid for the favorite artists and bands, with columns of at least 160px
+   that wrap on smaller screens */
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.artist-card {
+  text-align: center;
+}
+
+.artist-card a {
+  display: inline-block;
+  line-height: 0;
+}
+
+/* To crop each artist's picture into a circle (border-radius: 50%) with a dark border and soft shadow.
+   The picture sits inside a link, so clicking it opens the artist's Spotify page */
+.artist-card img {
+  box-sizing: border-box;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  background-color: #e8e8e8;
+  border: 3px solid #505050;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.artist-card img:hover {
+  border-color: #8c8c8c;
+}
+
+.artist-card h4 {
+  margin: 12px 0 0 0;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.song {
+  margin: 4px 0 0 0;
+  font-size: 0.95rem;
+  color: #505050;
+}
+
+footer a {
+  color: #e8e8e8;
+}
+
+footer a:hover {
+  color: #b9b9b9;
+}
+
+/* To make the footer, the bottom part of the page, have a black background
+   with light gray, centered text */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #e8e8e8;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.sources-title {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sources {
+  max-width: 800px;
+  margin: 5px auto 0 auto;
+  padding: 0 15px;
+  list-style: none;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* To indent the first line of each paragraph in the Reflection section by 2em
+   (text-indent), like a printed essay */
+#reflection p {
+  text-indent: 2em;
+}
+
+/* To apply these rules only when the screen is 600px wide or narrower (a phone). They make the
+   name, menu, pictures and table smaller so everything fits without sideways scrolling */
+@media (max-width: 600px) {
+  body {
+    overflow-wrap: break-word;
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .back-home {
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    gap: 8px 18px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .hobby-card img {
+    height: 200px;
+  }
+
+  .hobby-card h3 {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  th {
+    letter-spacing: 1px;
+  }
+}

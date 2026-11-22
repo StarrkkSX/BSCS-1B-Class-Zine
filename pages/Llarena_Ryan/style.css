@@ -1,0 +1,287 @@
+:root {
+  --yellow: #f1c99b;
+  --orange: #d89771;
+  --purple: #6d374e;
+  --blue: #27364a;
+  --dark: #2a1a14;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(images/manrope.woff2) format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+/* Two columns, 200px sidebar, rest content. Header/footer span both. */
+body {
+  font-family: Manrope, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 1115px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: start;
+  /* Vignette bands darken left and right edges of the fixed background. */
+  background-image:
+    linear-gradient(to right, rgba(10, 16, 26, 0.8) 0%, transparent 18%, transparent 82%, rgba(10, 16, 26, 0.8) 100%),
+    url(images/background.jpg);
+  background-attachment: fixed;
+  background-position: center bottom, center bottom;
+  background-size: cover, cover;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: #ffffff;
+}
+
+header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background-color: var(--blue);
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+section {
+  background-color: var(--blue);
+  padding: 20px 32px;
+  margin: 0 0 16px;
+}
+
+/* Soft shadows lift every panel off the bright background image. */
+header,
+section,
+.sidebar,
+table {
+  box-shadow: 0 6px 20px rgba(12, 18, 30, 0.55);
+}
+
+header,
+footer {
+  padding: 20px;
+}
+
+/* Sidebar track: pinned to viewport, scroll-driven animation moves nav inside it like a thumb. */
+.sidebar-track {
+  grid-column: 1;
+  grid-row: 2;
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  height: calc(100vh - 32px);
+  overflow: hidden;
+  container-type: size;
+  animation: sidebar-progress linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0% 100%;
+}
+
+@property --sidebar-p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes sidebar-progress {
+  to { --sidebar-p: 1; }
+}
+
+.sidebar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  box-sizing: border-box;
+  background-color: var(--blue);
+  padding: 14px;
+  transform: translateY(round(nearest, calc((100cqh - 100% - 91px) * var(--sidebar-p)), 1px));
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+footer {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.sidebar ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li+li {
+  margin-top: 10px;
+}
+
+.sidebar a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+/* .sidebar prefix needed, else .sidebar a wins on colour. */
+.sidebar .back-home {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sidebar a:hover {
+  border-bottom-color: var(--yellow);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* Blue palette sampled from background.jpg: deep navy -> mid steel -> light sky. */
+  background-image: linear-gradient(95deg, #1e2b40 0%, #3c5670 55%, #4a6b88 100%);
+}
+
+th,
+td {
+  border: 1px solid #6d8aa4;
+  padding: 10px;
+  text-align: left;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+th {
+  background-color: var(--blue);
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hello {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 12px;
+}
+
+.profile {
+  flex: 0 0 160px;
+  margin: 0;
+  text-align: center;
+}
+
+.profile img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.profile figcaption {
+  font-size: 0.85rem;
+  color: var(--yellow);
+  margin-top: 6px;
+}
+
+.chart {
+  margin: 0;
+}
+
+.chart img {
+  width: 100%;
+  display: block;
+}
+
+.chart-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.credit {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+code {
+  font-family: monospace;
+  color: var(--yellow);
+}
+
+a {
+  color: var(--yellow);
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+f {
+  color: #ffffff;
+}
+
+h2 {
+  color: var(--yellow);
+}
+
+/* Phone: one column, sidebar becomes link row on top. */
+@media (max-width: 760px) {
+  body {
+    display: block;
+  }
+
+  header,
+  section,
+  .sidebar-track {
+    margin-bottom: 14px;
+  }
+
+  .sidebar-track {
+    position: static;
+    height: auto;
+    overflow: visible;
+    container-type: normal;
+    animation: none;
+  }
+
+  .sidebar {
+    position: static;
+    transform: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .sidebar li+li {
+    margin-top: 0;
+  }
+
+  .hello {
+    gap: 16px;
+  }
+
+  .profile {
+    flex-basis: 110px;
+  }
+}

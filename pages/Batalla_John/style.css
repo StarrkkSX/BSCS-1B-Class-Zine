@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&display=swap");
+
+:root{
+  --sky-top:#0b0b3b; --sky-mid:#4a2a7a; --sky-pink:#e0569a; --sky-glow:#ffb36b;
+  --cord:#e0243b; --cord-dark:#6b0a18; --gold:#ffd27a;
+  --text:#f6ecff; --muted:#cdb8ea; --panel:rgba(18,8,46,.62);
+}
+*,*::before,*::after{box-sizing:border-box}
+
+/* ---------- twilight sky (kataware-doki) ---------- */
+html{
+  scroll-behavior:smooth;
+  background-color:var(--sky-top);
+  background-image:
+    radial-gradient(70% 40% at 50% 100%,rgba(255,190,120,.5),transparent 70%),
+    linear-gradient(180deg,var(--sky-top) 0%,#1d1760 30%,var(--sky-mid) 55%,var(--sky-pink) 80%,var(--sky-glow) 100%);
+  background-attachment:fixed;
+}
+body{
+  margin:0;
+  color:var(--text);
+  font-family:"Shippori Mincho",serif;
+  line-height:1.8;
+}
+
+/* stars */
+html::before{
+  content:"";position:fixed;inset:0 0 35% 0;z-index:-3;
+  background:
+    radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),
+    radial-gradient(1px 1px at 90px 80px,#fff,transparent),
+    radial-gradient(1.5px 1.5px at 150px 20px,#ffe9c7,transparent),
+    radial-gradient(2px 2px at 190px 120px,#cfe0ff,transparent);
+  background-size:220px 170px;
+  animation:twinkle 6s ease-in-out infinite alternate;
+}
+@keyframes twinkle{from{opacity:.45}to{opacity:1}}
+
+/* Comet Tiamat: tail (body::before) + glowing head (html::after) */
+body::before{
+  content:"";position:fixed;z-index:-2;
+  top:14%;right:10%;width:min(60vw,640px);height:26px;
+  transform-origin:right center;transform:rotate(-32deg);
+  background:linear-gradient(270deg,rgba(255,255,255,.95),rgba(170,225,255,.6) 25%,rgba(255,150,200,.25) 65%,transparent);
+  clip-path:polygon(100% 35%,0 0,0 100%,100% 65%);
+  filter:blur(1px);
+  animation:drift 40s ease-in-out infinite alternate;
+}
+html::after{
+  content:"";position:fixed;z-index:-2;
+  top:calc(14% + 0px);right:calc(10% - 13px);width:26px;height:26px;border-radius:50%;
+  background:radial-gradient(circle,#fff 0 30%,#d8f2ff 45%,transparent 72%);
+  box-shadow:0 0 18px 8px rgba(190,235,255,.85),0 0 70px 30px rgba(120,190,255,.5),0 0 160px 70px rgba(255,120,190,.25);
+  animation:pulse 4s ease-in-out infinite alternate;
+}
+@keyframes drift{from{transform:rotate(-32deg)}to{transform:rotate(-29deg) translate(-2vw,1.5vh)}}
+@keyframes pulse{to{filter:brightness(1.3)}}
+
+/* Itomori mountains + Tokyo skyline silhouette */
+body::after{
+  content:"";position:fixed;left:0;right:0;bottom:0;height:38vh;z-index:-1;
+  background:linear-gradient(180deg,#2a1450,#12082e);
+  clip-path:polygon(0 100%,0 60%,8% 42%,16% 52%,26% 28%,34% 45%,44% 36%,52% 56%,
+    55% 56%,55% 46%,58% 46%,58% 38%,61% 38%,61% 52%,64% 52%,64% 30%,66% 30%,66% 14%,66.5% 14%,66.5% 0,67% 14%,67.5% 14%,67.5% 30%,
+    70% 30%,70% 48%,74% 48%,74% 58%,78% 58%,78% 40%,81% 40%,81% 22%,83% 22%,83% 12%,84.2% 12%,84.2% 22%,86% 22%,86% 50%,
+    90% 50%,90% 62%,94% 62%,94% 46%,97% 46%,97% 64%,100% 64%,100% 100%);
+}
+
+/* ---------- red braided cord (reused as dividers) ---------- */
+header::after,footer::before,h2::after{
+  content:"";display:block;
+  background:repeating-linear-gradient(135deg,var(--cord) 0 6px,var(--cord-dark) 6px 12px);
+  border-radius:99px;
+  filter:drop-shadow(0 0 6px rgba(255,60,90,.65));
+}
+
+/* ---------- header + nav ---------- */
+header{text-align:center;padding:clamp(40px,10vh,100px) 1rem 0}
+header h1{
+  margin:0;font-size:clamp(2.2rem,7vw,4.4rem);font-weight:800;letter-spacing:.06em;line-height:1.15;
+  text-shadow:0 0 24px rgba(255,150,200,.75),0 2px 0 rgba(40,10,70,.5);
+}
+header p{margin:.6rem 0 0;font-size:clamp(.9rem,2vw,1.2rem);letter-spacing:.3em;opacity:.9}
+nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;list-style:none;margin:1.6rem 0 0;padding:0}
+nav a{
+  display:inline-block;padding:.4em 1.3em;border-radius:999px;
+  border:1px solid rgba(255,255,255,.35);background:rgba(18,8,46,.35);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  color:#fff;text-decoration:none;letter-spacing:.08em;
+  transition:background .2s,box-shadow .2s;
+}
+nav a:hover,nav a:focus-visible{background:var(--cord);box-shadow:0 0 16px rgba(255,60,90,.7)}
+header::after{width:min(720px,90%);height:7px;margin:2rem auto 0}
+
+/* ---------- content panels ---------- */
+main{max-width:860px;margin:2rem auto;padding:0 1rem;display:grid;gap:1.5rem}
+section{
+  scroll-margin-top:1rem;
+  padding:1.5rem 1.75rem;
+  background:var(--panel);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,170,210,.25);border-left:5px solid var(--cord);
+  border-radius:14px;box-shadow:0 10px 40px rgba(5,0,30,.45);
+}
+h2{margin:0 0 1rem;font-size:1.6rem;letter-spacing:.05em}
+h2::after{width:64px;height:5px;margin-top:.4rem}
+h3{margin:1.2rem 0 .4rem;color:var(--gold);font-size:1.15rem}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+
+a{color:var(--gold);text-underline-offset:3px}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* picture */
+figure{float:left;margin:0 1.5rem 1rem 0;max-width:200px;text-align:center}
+figure img{
+  display:block;max-width:100%;height:auto;border-radius:14px;
+  border:2px solid rgba(255,170,210,.6);box-shadow:0 0 22px rgba(255,120,190,.45);
+}
+figcaption{margin-top:.4rem;font-size:.85rem;color:var(--muted)}
+#about::after{content:"";display:table;clear:both}
+
+/* lists */
+ul,ol{margin:0;padding-left:1.4rem}
+li{margin:.3em 0}
+ul li::marker{color:var(--sky-pink)}
+ol li::marker{color:var(--gold);font-weight:800}
+
+/* schedule table */
+table{width:100%;border:0;border-collapse:separate;border-spacing:0;border-radius:10px;overflow:hidden}
+th,td{padding:.7rem .9rem;text-align:left;border:0;border-bottom:1px solid rgba(255,255,255,.12);vertical-align:top}
+th{background:linear-gradient(90deg,#6a2f9a,#c0408a);letter-spacing:.05em}
+tbody tr:nth-child(even){background:rgba(255,255,255,.05)}
+tbody tr:hover{background:rgba(255,120,190,.14)}
+tbody tr:last-child td{border-bottom:0}
+
+/* ---------- footer ---------- */
+footer{padding:0 1rem 3rem;text-align:center;color:var(--muted);font-size:.9rem}
+footer::before{width:min(720px,90%);height:7px;margin:0 auto 1.5rem}
+
+/* ---------- small screens ---------- */
+@media (max-width:640px){
+  section{padding:1.25rem 1.1rem}
+  figure{float:none;margin:0 auto 1rem}
+  table{display:block;overflow-x:auto}
+  body::before{top:10%}
+  html::after{top:10%}
+}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}

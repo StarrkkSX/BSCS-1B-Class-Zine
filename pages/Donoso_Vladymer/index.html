@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vladymer Cyrus S. Donoso Jr. - About Me</title>
+  <!-- External CSS file: all styling lives in style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- HEADER: site name, back-to-home link, and navigation to every section -->
+  <header>
+    <a class="home-link" href="../../index.html">Back to Home</a>
+    <nav aria-label="Main navigation">
+      <a href="#hello">Hello</a>
+      <a href="#about">About Me</a>
+      <a href="#path">My Path</a>
+      <a href="#favorites">Favorites &amp; Skills</a>
+      <a href="#goals">Goals</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1 - HELLO: preferred name, program, year level, one sentence about me, profile image -->
+    <section id="hello" class="hello">
+      <img src="image/profile.png" alt="Portrait of Vladymer Cyrus S. Donoso Jr.">
+      <div class="hello-text">
+        <h1>Hello, I'm Vladymer Cyrus S. Donoso Jr.!</h1>
+        <p>I'm a first-year Computer Science student at Bicol University. I'm still figuring out where computing will take me, but I like learning how things work along the way.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 - ABOUT ME: interests, hobbies, and a typical day -->
+    <section id="about">
+      <h2>About Me</h2>
+      <h3>Interests and Hobbies</h3>
+      <p>In my free time I play games, read, and listen to music. I also like going outside to enjoy nature and take a break from my daily routine. These things make me happy and help me relax after a busy week.</p>
+      <h3>A Typical Day</h3>
+      <p>Most days start early with classes, followed by programming practice and homework in the afternoon. In the evening I unwind with music or a game. My schedule below shows how my week is organized.</p>
+
+      <!-- Table: my weekly class schedule (days listed in order) -->
+      <div class="table-wrap">
+        <table>
+          <caption>My weekly class schedule</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>Introduction to Computing (CS 101)</td><td>9:00 AM - 12:00 PM</td></tr>
+            <tr><td>Monday</td><td>Computer Programming 1 (CS 102)</td><td>1:00 PM - 4:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>Computer Programming 1 (CS 102)</td><td>1:00 PM - 3:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>Movement Competency Training (PATHFit 1)</td><td>7:00 AM - 9:00 AM</td></tr>
+            <tr><td>Wednesday</td><td>Computer Programming 1 (CS 102)</td><td>1:00 PM - 4:00 PM</td></tr>
+            <tr><td>Thursday</td><td>Mathematical Analysis (Math 101)</td><td>9:00 AM - 10:30 AM</td></tr>
+            <tr><td>Thursday</td><td>Physics for Computing (Phys 1)</td><td>10:30 AM - 12:00 PM</td></tr>
+            <tr><td>Friday</td><td>Mathematical Analysis (Math 101)</td><td>10:00 AM - 12:00 PM</td></tr>
+            <tr><td>Friday</td><td>Understanding the Self (GEC 11)</td><td>1:00 PM - 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>ROTC (NSTP 11)</td><td>8:00 AM - 11:00 AM</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3 - MY PATH INTO COMPUTING: how I got interested and why I chose this program -->
+    <section id="path">
+      <h2>My Path into Computing</h2>
+      <p>Computer Science wasn’t my original plan. I didn’t pass the entrance requirements for my first-choice program, so I picked Computer Science instead. At first it was just a backup, but as I started learning programming and solving problems in class, I began to enjoy it. Now I’m glad I ended up here, and I’m curious to see where it takes me.</p>
+    </section>
+
+    <!-- SECTION 4 - FAVORITES AND SKILLS: a list of favorites and a table of skills I'm building -->
+    <section id="favorites">
+      <h2>Favorites and Skills</h2>
+      <!-- Flexbox/grid layout: the two blocks sit side by side on wide screens and stack on phones -->
+      <div class="two-col">
+        <div>
+          <h3>My Favorites</h3>
+          <ul>
+            <li>Website: <a href="https://www.netflix.com/" target="_blank" rel="noopener">Netflix</a>, because I enjoy watching movies to relax</li>
+            <li>Free-time activities: games, outdoor activities, and reading</li>
+            <li>Place to unwind: anywhere outdoors with fresh air</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Skills I'm Building</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">Skill</th><th scope="col">Where I practice</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Programming basics</td><td>CS 102</td></tr>
+                <tr><td>Web design (HTML and CSS)</td><td>This web page</td></tr>
+                <tr><td>Problem solving</td><td>Math 101 and CS 101</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 - GOALS: what I hope to learn or do in the next few years -->
+    <section id="goals">
+      <h2>My Goals</h2>
+      <p>In the next few years I hope to learn how to build complete programs and websites from scratch. These are my top three goals:</p>
+      <ol>
+        <li>Finish college and earn my degree.</li>
+        <li>Figure out what I want to do in life.</li>
+        <li>Become financially stable.</li>
+      </ol>
+    </section>
+
+    <!-- SECTION 6 - REFLECTION: what I learned about myself and web design -->
+    <section id="reflection">
+      <h2>Reflection</h2>
+      <p>I found it easy to add headings, paragraphs, and lists to my webpage.</p>
+      <p>I was a little confused about how CSS changes the look of a page and how Flexbox arranges the menu.</p>
+      <p>I learned that HTML and CSS work together to make a webpage. I would improve my page by learning more CSS and adding more features in the future.</p>
+    </section>
+
+    <!-- SOURCES: credits for the image and any outside references -->
+    <section id="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Profile photo: taken by me.</li>
+        <li><a href="https://www.netflix.com/" target="_blank" rel="noopener">Netflix</a> - my favorite website.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs: HTML</a> - reference for HTML tags.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs: CSS</a> - reference for styling and layout.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: my name and a back-to-home link -->
+  <footer>
+    <p>&copy; 2026 Vladymer Cyrus S. Donoso Jr.</p>
+    <p><a href="../../index.html">Back to Home</a> | <a href="#top">Back to top</a></p>
+  </footer>
+
+</body>
+</html>

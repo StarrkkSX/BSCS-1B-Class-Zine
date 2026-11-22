@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedidiah Chan's About Me</title>
+
+    <!--For cyberpunk font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section class ="hero" id="hero">
+            <div class ="logo">
+                <img src="images/Black Red Initial Name Japanese Logo.png" alt="Jedidiah Chan logo" class="profile-pic">
+            </div>
+        </section>
+        <nav class="nav">
+            <ul>
+                <li><a href="../../index.html">Back to Home</a></li>
+                <li><a href="#home">Hello</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#computing">Path</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+                <li><a href="#sources">Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--My home page/introduction-->
+        <section class="Hello" id="home">
+            <div class="Introduction">
+            <h1>Hello! I'm Jedidiah <br>Chan</h1>
+            <div class="student-meta" aria-label="Student information">
+                <span class="detail-chip">Course: BS Computer Science</span>
+                <span class="detail-chip">Year: First Year</span>
+            </div>
+            <div class="tag">
+                <p>Becoming better one code at a time</p>
+            </div>
+            <!--I couldn't figure out how to make a "favorite" section containing links look good, so I just put my socials here since the goal of it was to add a website I liked.-->
+            <!--The HREF is used to specify the destination URL of a clickable hyperlink -->
+            <nav class="links" aria-label="links">
+                <a href="https://open.spotify.com/user/3fw3gfktfnrwokauw1apwm3pv" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a href="https://github.com/itsmealoy" target="_blank" rel="noopener noreferrer">github</a>
+            </nav>
+            </div>
+            <div class="profile-pic">
+                <!--The image here shows my profile as a way to introduce me.-->
+                <img src="images/profile.JPG" alt="Jedidiah Chan profile-pic">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <div class="grid-container">
+                <div class="box" style ="grid-area: box-1;">
+                    <img src="images/IMG_2122.jpg" alt="Jedidiah Chan Photo">
+                </div>
+                <div class="box" style ="grid-area: box-2;">
+                    <h3>Who Am I</h3>
+                    <p>I am <strong>Jedidiah Chan</strong>, a Computer Science student at Bicol University with a passion for technology, problem solving, and programming.</p>
+                </div>
+                <div class="box" style ="grid-area: box-3;">
+                    <h3>A Day In My Life</h3>
+                    <p>My life is pretty boring. I first wake up at around 6am to get ready for my classes for the day. Once ready, I go to my first class at 9am and then eat my lunch at 12pm. I usually don't have any classes during the afternoon, since my computer programming 1 class is mostly held online, so I spend it by studying any material I find difficult. At 4pm I go to the gym and as soon as I am done, I go back home to either chill or study again. </p>
+                </div>
+                <div class="box" style ="grid-area: box-4;">
+                    <h3>Personal Details</h3>
+                    <div class="details">
+                        <div class="details-grid" style="grid-area: detail1;"><small>NAME</small><strong>Jedidiah Chan</strong></div>
+                        <div class="details-grid" style="grid-area: detail2;"><small>PLACE OF BIRTH</small><strong>Legazpi City</strong></div>
+                        <div class="details-grid" style="grid-area: detail3;"><small>Course</small><strong>BS Computer Science</strong></div>
+                        <div class="details-grid" style="grid-area: detail4;"><small>Email</small><strong>jedidiahdestura.chan26@bicol-u.edu.ph</strong></div>
+                        <div class="details-grid" style="grid-area: detail5;"><small>Education</small><strong>Bicol University</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hobbies" id="hobbies">
+          <h2>My Hobbies</h2>
+          <!--I got the idea to use rotating cards from an old website I made. I used divs to group each elements into their own respective cards.-->
+            <div class="hobby">
+                 <div class="card" style="grid-area: hobby1;">
+                    <div class="card-inner">
+                        <div class="front" id="front1">
+                            <img class="front-image" src="images/IMG_7766.jpg" alt="Jedidiah playing bass">
+                            <h3>Instruments</h3>
+                            <button>Hover Me</button>
+                        </div>
+                        <div class="back">
+                            <img src="images/ac61cfca-cde2-4b8b-8af0-11691700214e.gif" alt="Notes Animation">
+                            <h3>Playing <span>Instruments</span></h3>
+                            <p>I really enjoy playing instruments. I am able to play the guitar, let it be acoustic, 
+                                bass, or electric. I am also currently learning how to play the piano.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Guitar</h4>
+                                    <p>Pretty Good</p>
+                                </div>
+                                <div class="col">
+                                    <h4>Piano</h4>
+                                    <p>A work in progress</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="grid-area: hobby2;">
+                     <div class="card-inner">
+                        <div class="front" id="front2">
+                            <img class="front-image" src="images/IMG_7789.PNG" alt="Resident Evil Village downloading on a computer">
+                            <h3>Video Games</h3>
+                            <button>Hover Me</button>
+                        </div>
+                        <div class="back">
+                            <img src="images/c3c49b8e-b5db-4a70-91a0-57c496a74932.gif" alt="Controller Animation">
+                            <h3>Playing <span>Video Games</span></h3>
+                            <p>One may say that I could be a little bit too into video games.
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>RDR2</h4>
+                                    <p>The GOAT</p>
+                                </div>
+                                <div class="col">
+                                    <h4>Valorant</h4>
+                                    <p>with friends</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="grid-area: hobby3;">
+                    <div class="card-inner">
+                        <div class="front" id="front3">
+                            <img class="front-image" src="images/IMG_5165.jpeg" alt="A page from La Vida Imposible">
+                            <h3>Reading</h3>
+                        <button>Hover Me</button>
+                        </div>
+                        <div class="back">
+                            <img src="images/4381fb3e-2e9a-42cb-9ca1-062aa00a412e.gif" alt="Book Animation">
+                            <h3>Reading <span>Books</span></h3>
+                            <p>I especially enjoy reading during vacations when my work load is lesser, leaving me time to just chill.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>The Count of Monte Cristo</h4>
+                                    <p>Peak Revenge</p>
+                                </div>
+                                <div class="col">
+                                    <h4>Before the coffee gets cold</h4>
+                                    <p>Chill Read</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about computing-path" id="computing">
+            <h2>My Path into Computing</h2>
+            <div class="computing-story">
+                <p>Ever since I was a child I was always interested in computers. For as long as I can remember, I have had a computer. I spent my time by randomly tweaking with it, looking into it, and have fun with it. Eventually, it became part of my identity. When the people in my life think about a computer, they usually think about me with it.</p>
+                <p>After that, during my times in elementary, it was just drilled onto my brain that I would either pursue Computer Engineering or Computer Science. Eventually, when the pandemic came around, I saw all of this content regarding computer science and just made up my mind. I was going to be a computer science student.</p>
+                <p>And now, as a computer science student, I finally have the opportunity to pursue this interest as a career. Although, I may not know where this path will take me, I shall keep striving forward. I code at a time. </p>
+            </div>
+        </section>
+        <section class="favorites" id="favorites">
+            <div class="wrapper">
+	            <h2>My Favorite Music</h2>
+	                <ol>
+		                <li>
+		                	<span>Stop This Train</span>
+		                	<span>John Mayer</span>
+		                </li>
+		                <li>
+		                	<span>Misty</span>
+		                	<span>Laufey</span>
+		                </li>
+		                <li>
+		                	<span>Gravity</span>
+		                	<span>John Mayer</span>
+		                </li>
+		                <li>
+		                	<span>Ako Na Lang</span>
+		                	<span>Zia Quizon</span>
+		                </li>
+		                <li>
+		                	<span>Wonderwall</span>
+		                	<span>Oasis</span>
+	                </ol>
+        </section>
+
+        <section class="goals-section" id="goals">
+            <h2>Goal</h2>
+            <div class="timeline">
+                <!--I made use of divs again to group the elements properly using text boxes-->
+                <div class="goals left-container">
+                    <img src="images/images.png" alt="Bicol University Logo">
+                    <div class="text-box">
+                        <h2>Finish College</h2>
+                        <small>2026 - 2030</small>
+                        <p>During this time, I will focus on earning my Computer Science degree and building a strong foundation in programming. This includes completing my coursework, pursuing internships, earning relevant certifications, and developing projects that showcase my skills.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="goals right-container">
+                    <img src="images/8297314.png" alt="Developer Icon">
+                    <div class="text-box">
+                        <h2>Become a Skilled Developer</h2>
+                        <small>2027 - 2030</small>
+                        <p>I want to go beyond classroom learning by building practical applications, exploring different areas of software development, and strengthening my problem-solving skills. My goal is to develop a portfolio that demonstrates what I can create and the problems I can solve.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+                <div class="goals left-container">
+                    <img src="images/job-offer-creative-icon-design-vector.jpg" alt="Job Icon">
+                    <div class="text-box">
+                        <h2>Start My Career</h2>
+                        <small>2030 and Beyond</small>
+                        <p>After graduation, I aim to begin my career as a software engineer, collaborate with other developers, and contribute to projects that make a meaningful difference. I also want to keep learning, improve my expertise, and work toward a career that offers both purpose and flexibility.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule" id="schedule">
+            <h2>Schedule</h2>
+            <div class="schedule-topbar">
+                <div class="school-name">Bicol University Schedule</div>
+                <div class="semester">AY 2026-2027 | 1st Semester</div>
+            </div>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th class="time-column">Time</th>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-label">06:00 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">06:30 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">07:00 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td rowspan="4">
+                            <div class="course-card card-red">
+                                <div class="course-title">Movement Competency Training</div>
+                                <div class="meta">BSCS-1B | IPES-FIELD-122</div>
+                                <div class="instructor">Aldrin A. Rellama</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td rowspan="6">
+                            <div class="course-card card-blue">
+                                <div class="course-title">CWTS</div>
+                                <div class="meta">CWTS-AM-1(CS) | ---</div>
+                                <div class="instructor">Rebael V. Nidea</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">07:30 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">08:00 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">08:30 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">09:00 AM</td>
+                        <td class="empty"></td>
+                        <td rowspan="6">
+                            <div class="course-card card-brown">
+                                <div class="course-title">Introduction to Computing</div>
+                                <div class="meta">BSCS-1B | CS-04-211</div>
+                                <div class="instructor">Johnny E. Espiritu</div>
+                            </div>
+                        </td>
+                        <td rowspan="3">
+                            <div class="course-card card-purple">
+                                <div class="course-title">Mathematical Analysis</div>
+                                <div class="meta">BSCS-1B | MATH-04-109</div>
+                                <div class="instructor">Myra Angela L. Lola</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                        <td rowspan="3">
+                            <div class="course-card card-purple">
+                                <div class="course-title">Mathematical Analysis</div>
+                                <div class="meta">BSCS-1B | MATH-04-109</div>
+                                <div class="instructor">Myra Angela L. Lola</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">09:30 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">10:00 AM</td>
+                        <td class ="empty"></td>
+                        <td class = "empty"></td>
+                        <td rowspan="4">
+                            <div class="course-card card-purple">
+                                <div class="course-title">Mathematical Analysis</div>
+                                <div class="meta">BSCS-1B | MATH-04-109</div>
+                                <div class="instructor">Myra Angela L. Lola</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">10:30 AM</td>
+                        <td class="empty"></td>
+                        <td rowspan ="3"><div class="course-card card-green">
+                                <div class="course-title">Physics for Computing</div> <!-- This is actually 10:00 but i just put it here cause it looks better on the front-end. If put into 10:00, it would be swallowed by math analysis-->
+                                <div class="meta">BSCS-1B | CS-04-101</div>
+                                <div class="instructor">Jo-Anne M. Cordovilla</div>
+                            </div>
+                        <td class="empty"></td>
+                        <td rowspan ="3"><div class="course-card card-green">
+                                <div class="course-title">Physics for Computing</div>
+                                <div class="meta">BSCS-1B | CS-04-101</div>
+                                <div class="instructor">Jo-Anne M. Cordovilla</div>
+                            </div>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">11:00 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">11:30 AM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">12:00 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">12:30 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">01:00 PM</td>
+                        <td class="empty"></td>
+                        <td rowspan="6">
+                            <div class="course-card card-slate">
+                                <div class="course-title">Computer Programming 1</div>
+                                <div class="meta">BSCS-1B | CS-02-202</div>
+                                <div class="instructor">Arlene A. Satuio</div>
+                            </div>
+                        </td>
+                        <td rowspan="4">
+                            <div class="course-card card-slate">
+                                <div class="course-title">Computer Programming 1</div>
+                                <div class="meta">BSCS-1B | CS-04-205</div>
+                                <div class="instructor">Arlene A. Satuio</div>
+                            </div>
+                        </td>
+                        <td rowspan="6">
+                            <div class="course-card card-slate">
+                                <div class="course-title">Computer Programming 1</div>
+                                <div class="meta">BSCS-1B | CS-02-202</div>
+                                <div class="instructor">Arlene A. Satuio</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                        <td rowspan ="6"><div class="course-card card-teal">
+                                <div class="course-title">Understanding the Self</div>
+                                <div class="meta">BSCS-1B | CSSP-MH-25</div>
+                                <div class="instructor">Frennie Shanamah B. Belo</div>
+                            </div>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">01:30 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">02:00 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">02:30 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">03:00 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">03:30 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">04:00 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">04:30 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <td class="time-label">05:00 PM</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="reflection" id="reflection">
+            <h2>Reflection</h2>
+            <p>When first making this website, I couldn’t decide on a theme. I just didn’t know what theme could possibly represent me as a person. That’s when I had the idea: who else could know me better than my friends? They do say that close friends may see certain sides of you that even you wouldn’t realize. So that’s what I did. I asked a friend what theme I should go with and eventually came up with the cyberpunk theme.
+                To explain it, I used to really love the Cyberpunk anime, and although I haven’t played the game, I’m a really big gamer. Plus, I’m in tech so I guess I just thought it fit me. It encompassed three parts of me, my old love for anime, my passion for gaming, and my identity as a tech bro.
+                I gave my all for the first design expecting to have a lighter work load for when the final project came along. With this, I became complacent. Without realizing it, the instructions for the final project website also contained changes to the original template. There came new sections like the path to computing, favorites and skills, and this reflection I’m writing now. Because I didn’t check right away, I rushed those additions.
+                From this, I realized that to make a good webpage, one needs to give it time and effort, and a clear vision of what one intends to do with it. Without them, the page becomes cluttered, scattered, and inconsistent. It wouldn’t be able to perform its due purpose. Compared to my About Me activity, my website now supports mobile view, new sections have been added, and new information based on the requirements given. Most of all, I learned that feeling prepared is not a reason to stop paying attention, and that I should read updated instructions as soon as they are posted instead of cramming. Most of all, I learned that feeling prepared is not a reason to stop paying attention, and that I should read updated instructions as soon as they are posted instead of cramming.</p>
+        </section>
+
+        <!--List of Sources-->
+        <section class="sources" id="sources">
+            <h2>Sources</h2>
+            <div class="sources-container">
+                <ul class="source-list">
+                    <li><a href="https://fonts.google.com/specimen/Play" target="_blank" rel="noopener noreferrer">Google Fonts — Play</a></li>
+                     <li><a href="https://in.pinterest.com/pin/297167275427914681/" target="_blank" rel="noopener noreferrer">Controller Icon</a></li>
+                    <li><a href="https://emojipedia.org/animated-noto-color-emoji/15.0/musical-notes" target="_blank" rel="noopener noreferrer">Notes Icon</a></li>
+                    <li><a href="https://lottiefiles.com/free-animation/books-Sjcr3exbmd" target="_blank" rel="noopener noreferrer">Books Icon</a></li>
+                    <li><a href="https://www.facebook.com/BicolUniversity/about/" target="_blank" rel="noopener noreferrer">Bicol University logo</a></li>
+                    <li><a href="https://www.flaticon.com/free-icon/build_8297314" target="_blank" rel="noopener noreferrer">Developer Icon</a></li>
+                    <li><a href="https://www.vecteezy.com/vector-art/41531274-job-offer-creative-icon-design" target="_blank" rel="noopener noreferrer">Job Icon</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+    <p>Made by Jedidiah Chan (2026) for CS 101, Bicol University.</p>
+  </footer>
+</body>
+</html>

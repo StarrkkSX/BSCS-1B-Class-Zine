@@ -1,0 +1,288 @@
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  color: #263248;
+
+  /* Dragon background image */
+  background-image: url("images/The Father of Dragon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(
+    110deg,
+    rgba(181, 18, 36, 0.92) 50%,
+    rgba(18, 63, 145, 0.92) 50%
+  );
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.site-header h1 {
+  font-size: 2.8rem;
+  margin: 10px 0;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #b51224;
+}
+
+.site-header .eyebrow {
+  color: #ffffff;
+}
+
+.tagline {
+  margin-bottom: 25px;
+}
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin-top: 25px;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 9px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  background: white;
+  color: #123f91;
+}
+
+/* Main content */
+main {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-top: 5px solid #b51224;
+}
+
+.panel:nth-of-type(even) {
+  border-top-color: #123f91;
+}
+
+.panel h2 {
+  color: #123f91;
+  margin-bottom: 15px;
+}
+
+.panel p {
+  margin-bottom: 15px;
+}
+
+/* About section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.intro-copy {
+  flex: 2;
+}
+
+.profile-wrap {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-wrap img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  border: 5px solid #123f91;
+}
+
+.profile-wrap figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #b51224;
+}
+
+/* Two-column sections */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Lists */
+.styled-list {
+  padding-left: 25px;
+}
+
+.styled-list li {
+  margin-bottom: 10px;
+}
+
+.styled-list li::marker {
+  color: #b51224;
+}
+
+/* Links */
+a {
+  color: #123f91;
+}
+
+a:hover {
+  color: #b51224;
+}
+
+/* Schedule table */
+.table-note {
+  margin-bottom: 15px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+th,
+td {
+  padding: 13px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #123f91;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #eaf0ff;
+}
+
+tbody tr:nth-child(odd) {
+  background: #fff0f0;
+}
+
+/* Sources */
+.source-list {
+  padding-left: 25px;
+}
+
+.source-list li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(
+    110deg,
+    rgba(181, 18, 36, 0.95) 50%,
+    rgba(18, 63, 145, 0.95) 50%
+  );
+  color: white;
+  padding: 25px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+/* Footer navigation links */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-home {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.back-home:hover {
+  color: #ffe5e5;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+}

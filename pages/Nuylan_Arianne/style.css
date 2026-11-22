@@ -1,0 +1,983 @@
+/* COLORS, SIZES, AND FONTS: values stored as variables so they can be reused everywhere with var(--name). Change a color or font here and the whole site updates. */
+:root {
+    --pink-50: #fff7fa;
+    --pink-100: #ffedf3;
+    --pink-200: #f9d5e2;
+    --pink-300: #efb5ca;
+    --pink-500: #d66b91;
+    --rose: #a63f68;
+    --wine: #702743;
+    --ink: #38232d;
+    --muted: #765b67;
+    --white: #ffffff;
+    --shadow: 0 14px 35px rgba(112, 39, 67, 0.09);
+    --radius: 22px;
+    --font-heading: Georgia, "Times New Roman", Times, serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* RESET: removes the browser's default spacing so every element starts the same, and makes scrolling to a section smooth. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* PAGE BODY: default font, text color, line spacing, and the flourish wallpaper behind the whole site. */
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    line-height: 1.7;
+    background-color: var(--pink-50);
+    background-image: url("Vector_Flourish_Wallpaper_Laptop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* FLOATING HEARTS: a pattern of small hearts and sparkles that slowly drifts over the wallpaper (the keyframes block below sets the movement). */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M30 22c0-6-9-6-9 1 0 6 9 12 9 12s9-6 9-12c0-7-9-7-9-1z' fill='%23d66b91' fill-opacity='.16'/%3E%3Cpath d='M112 104c0-6-9-6-9 1 0 6 9 12 9 12s9-6 9-12c0-7-9-7-9-1z' fill='%23d66b91' fill-opacity='.12'/%3E%3Ccircle cx='110' cy='34' r='3' fill='%23a63f68' fill-opacity='.14'/%3E%3Ccircle cx='42' cy='118' r='2.5' fill='%23a63f68' fill-opacity='.14'/%3E%3Cpath d='M80 70l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z' fill='%23d66b91' fill-opacity='.18'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+    animation: drift 40s linear infinite;
+}
+
+@keyframes drift {
+    to {
+        background-position: 160px 160px;
+    }
+}
+
+/* BASIC ELEMENTS: images never grow wider than their container, and links take the color of the text around them. */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* SECTION WIDTH: keeps content centered and limited to a readable width. */
+.section-wrap {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+/* HEADER: the top bar stays visible while scrolling (sticky), with the logo on the left and navigation on the right. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 15px 5%;
+    background: rgba(255, 237, 243, 0.94);
+    border-bottom: 2px solid var(--pink-300);
+    box-shadow: 0 5px 22px rgba(112, 39, 67, 0.06);
+    backdrop-filter: blur(14px);
+}
+
+/* Scalloped (wavy) edge under the header. */
+.site-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 10px;
+    pointer-events: none;
+    background: radial-gradient(circle at 10px 0, rgba(255, 237, 243, 0.94) 10px, transparent 11px) repeat-x;
+    background-size: 20px 10px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--wine);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.brand-mark {
+    color: var(--pink-500);
+    font-size: 1.8rem;
+}
+
+/* NAVIGATION MENU: the row of links and their hover effect. */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.main-nav a,
+.back-home {
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.main-nav a {
+    padding: 9px 12px;
+    border-radius: 30px;
+    color: var(--wine);
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: var(--white);
+    background: var(--rose);
+}
+
+.back-home {
+    color: var(--wine);
+    white-space: nowrap;
+}
+
+.back-home:hover {
+    color: var(--pink-500);
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION: the framed intro area with a solid border, a dashed inner line, and a dotted background. */
+.hero {
+    position: relative;
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    margin-top: 40px;
+    padding-block: 85px 95px;
+    padding-inline: 55px;
+    border: 2px solid var(--pink-300);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-image: radial-gradient(var(--pink-200) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    box-shadow: var(--shadow);
+    outline: 2px dashed var(--pink-300);
+    outline-offset: -14px;
+}
+
+/* Small badges (flowers and hearts) on the top and bottom edge of the hero frame. */
+.hero::before,
+.hero::after {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    padding: 2px 20px;
+    border: 2px solid var(--pink-300);
+    border-radius: 30px;
+    background: var(--pink-100);
+    color: var(--pink-500);
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    line-height: 1.6;
+    transform: translateX(-50%);
+}
+
+.hero::before {
+    content: "✿ ♡ ✿";
+    top: -16px;
+}
+
+.hero::after {
+    content: "✦ ♡ ✦";
+    bottom: -16px;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+}
+
+/* HERO TEXT: small label, big name, role tag, intro sentence, and the main button. */
+.eyebrow {
+    color: var(--rose);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.script {
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+.hero h1 {
+    max-width: 650px;
+    margin-bottom: 18px;
+    color: var(--wine);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -0.03em;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--rose);
+}
+
+.hero-role {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 16px;
+    border: 1px solid var(--pink-300);
+    border-radius: 30px;
+    background: var(--pink-100);
+    color: var(--wine);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.hero-role span {
+    padding-inline: 5px;
+    color: var(--pink-500);
+}
+
+.hero-intro {
+    max-width: 470px;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.button-primary {
+    background: var(--rose);
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(166, 63, 104, 0.2);
+}
+
+.button-primary:hover {
+    transform: translateY(-3px);
+    background: var(--wine);
+    box-shadow: 0 12px 25px rgba(112, 39, 67, 0.2);
+}
+
+/* PROFILE PHOTO: the round photo with its borders, plus the heart and sparkle decorations around it. */
+.hero-photo-wrap {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 390px;
+}
+
+.photo-frame {
+    width: min(360px, 82%);
+    aspect-ratio: 1;
+    padding: 12px;
+    border: 2px solid var(--pink-300);
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: 0 22px 55px rgba(112, 39, 67, 0.15);
+    outline: 2px dashed var(--pink-500);
+    outline-offset: 10px;
+    transform: rotate(3deg);
+    transition: transform 0.35s ease;
+}
+
+.photo-frame:hover {
+    transform: rotate(0deg) scale(1.025);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photo-heart {
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+    color: var(--rose);
+    font-size: 4rem;
+    transform: rotate(12deg);
+}
+
+.photo-decoration,
+.hero-sparkle {
+    position: absolute;
+    color: var(--pink-500);
+    font-size: 2.3rem;
+}
+
+.decoration-one {
+    top: 6%;
+    left: 10%;
+}
+
+.sparkle-one {
+    top: 16%;
+    right: 3%;
+}
+
+.sparkle-two {
+    bottom: 8%;
+    left: 4%;
+}
+
+/* GENERAL SECTION STYLES: spacing between sections, the tinted polka-dot sections, and the section titles with the flower divider. */
+.content-section {
+    padding-block: 85px;
+}
+
+.section-tint {
+    background-color: rgba(255, 237, 243, 0.75);
+    background-image: radial-gradient(var(--pink-200) 2px, transparent 2px);
+    background-size: 26px 26px;
+    border-block: 2px dashed var(--pink-300);
+}
+
+.section-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-top: 7px;
+    color: var(--wine);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.section-heading h2::after {
+    content: "✿  ♡  ✿";
+    display: block;
+    margin-top: 10px;
+    color: var(--pink-500);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 0.35em;
+}
+
+.section-lead {
+    max-width: 620px;
+    margin: 12px auto 0;
+    color: var(--muted);
+}
+
+/* PANELS (CARDS): the white boxes used across the site, with a solid border, dashed inner line, and corner badges. */
+.panel {
+    position: relative;
+    border: 2px solid var(--pink-300);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow);
+    outline: 2px dashed var(--pink-200);
+    outline-offset: -9px;
+}
+
+.panel::before,
+.panel::after {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--pink-300);
+    border-radius: 50%;
+    background: var(--pink-100);
+    color: var(--pink-500);
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.panel::before {
+    content: "✿";
+    top: -14px;
+    left: 26px;
+}
+
+.panel::after {
+    content: "✦";
+    right: 26px;
+    bottom: -14px;
+}
+
+.panel h3 {
+    margin-bottom: 12px;
+    color: var(--wine);
+    font-size: 1.35rem;
+}
+
+/* ABOUT SECTION: text panel on the left, "Things I enjoy" box on the right. */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.about-panel {
+    padding: 32px;
+}
+
+.about-panel p + p {
+    margin-top: 14px;
+}
+
+.about-panel strong {
+    color: var(--rose);
+}
+
+.interest-panel {
+    padding: 30px;
+    border: 2px solid var(--pink-300);
+    border-radius: var(--radius);
+    background: linear-gradient(145deg, var(--pink-200), #fce8ef);
+}
+
+.interest-panel h3 {
+    margin-bottom: 18px;
+    color: var(--wine);
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+}
+
+.interest-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.interest-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 13px 8px;
+    border: 2px dotted var(--pink-300);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--wine);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-4px);
+    background: var(--white);
+}
+
+.interest-icon {
+    font-size: 1.6rem;
+}
+
+/* JOURNEY SECTION: panel with the </> symbol beside the text. */
+.journey-panel {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 28px;
+    padding: 35px;
+}
+
+.journey-symbol {
+    display: grid;
+    place-items: center;
+    width: 130px;
+    height: 130px;
+    border: 2px solid var(--pink-300);
+    border-radius: 30px;
+    background: var(--pink-100);
+    color: var(--rose);
+    font-family: monospace;
+    font-size: 2.8rem;
+    font-weight: 700;
+    transform: rotate(-4deg);
+}
+
+/* SKILLS AND GOALS: card grids (two columns for skills, three for goals) with a lift effect on hover. */
+.two-card-grid,
+.goal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card {
+    padding: 30px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover,
+.goal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 38px rgba(112, 39, 67, 0.13);
+}
+
+.card-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--pink-500);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.pretty-list {
+    padding-left: 20px;
+}
+
+.pretty-list li {
+    margin: 8px 0;
+    padding-left: 5px;
+}
+
+.pretty-list li::marker {
+    color: var(--pink-500);
+}
+
+.goal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.goal-card {
+    padding: 28px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.goal-number {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--pink-200);
+    color: var(--wine);
+    font-weight: 800;
+}
+
+/* REFLECTION SECTION: panel with the flower icon beside the text. */
+.reflection-panel {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+}
+
+.reflection-icon {
+    display: grid;
+    place-items: center;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: var(--pink-100);
+    color: var(--rose);
+    font-size: 3.5rem;
+}
+
+/* CONTACT SECTION: row of link buttons with a hover effect. */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 25px;
+}
+
+.contact-links a {
+    padding: 12px 18px;
+    border: 2px dashed var(--pink-300);
+    border-radius: 30px;
+    color: var(--wine);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-3px);
+    background: var(--rose);
+    color: var(--white);
+}
+
+/* FOOTER: dark wine-colored bar at the bottom with a scalloped top edge and the copyright text. */
+.site-footer {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 45px;
+    background: var(--wine);
+    color: var(--pink-50);
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    height: 10px;
+    pointer-events: none;
+    background: radial-gradient(circle at 10px 10px, var(--wine) 10px, transparent 11px) repeat-x;
+    background-size: 20px 10px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 35px;
+    align-items: start;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-small {
+    margin-top: 7px;
+    color: #f3cbd9;
+    font-size: 0.82rem;
+}
+
+.footer-sources h2 {
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.footer-sources ul {
+    padding-left: 18px;
+}
+
+.footer-sources a {
+    color: var(--pink-100);
+    font-size: 0.88rem;
+}
+
+.footer-sources a:hover {
+    color: var(--pink-300);
+}
+
+.footer-home {
+    padding: 11px 16px;
+    border-radius: 25px;
+    background: var(--pink-200);
+    color: var(--wine);
+}
+
+.footer-home:hover {
+    background: var(--white);
+    color: var(--wine);
+}
+
+.copyright {
+    padding: 15px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: #f3cbd9;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Centers the "Back to Home" button inside the footer. */
+.footer-link-wrap {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* KEYBOARD FOCUS: outline that shows which link is selected when using the Tab key (helps accessibility). */
+a:focus-visible {
+    outline: 3px solid var(--pink-500);
+    outline-offset: 4px;
+}
+
+/* SCHEDULE TABLE: the box around the table, the header row, striped rows, and the hover highlight. The table scrolls sideways on small screens. */
+.table-panel {
+    max-width: 920px;
+    margin-inline: auto;
+    padding: 12px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.schedule-table th {
+    padding: 15px 18px;
+    background: var(--rose);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.schedule-table td {
+    padding: 14px 18px;
+    border-bottom: 1px dashed var(--pink-300);
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+
+.schedule-table td:first-child {
+    color: var(--wine);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.schedule-table tbody tr {
+    transition: background 0.25s ease;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: var(--pink-100);
+}
+
+.schedule-table tbody tr:hover {
+    background: var(--pink-200);
+}
+
+.schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* RESPONSIVE: LARGE SCREENS (1400px and wider): slightly wider content and bigger text. */
+@media (min-width: 1400px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    .section-wrap {
+        width: min(1280px, 90%);
+    }
+}
+
+/* RESPONSIVE: TABLETS (900px and below): layouts stack into fewer columns and the wallpaper stops being fixed. */
+@media (max-width: 900px) {
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-block: 75px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-list {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .goal-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-home {
+        justify-self: start;
+    }
+}
+
+/* RESPONSIVE: PHONES (620px and below): single column, a swipeable one-row menu, smaller spacing, and the photo above the text. */
+@media (max-width: 620px) {
+    .section-wrap {
+        width: min(100% - 32px, 520px);
+    }
+
+    .site-header {
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .brand {
+        font-size: 1.25rem;
+    }
+
+    .top-home {
+        display: none;
+    }
+
+    .main-nav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 2px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav a {
+        flex-shrink: 0;
+        padding: 7px 9px;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+        padding-block: 65px 55px;
+        padding-inline: 22px;
+        border-radius: 22px;
+        outline-offset: -10px;
+        text-align: center;
+    }
+
+    .hero-copy {
+        order: 2;
+    }
+
+    .hero-photo-wrap {
+        order: 1;
+        min-height: 280px;
+    }
+
+    .photo-frame {
+        width: min(260px, 75%);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+    }
+
+    .hero-intro {
+        margin-inline: auto;
+    }
+
+    .content-section {
+        padding-block: 60px;
+    }
+
+    .about-panel,
+    .interest-panel,
+    .info-card,
+    .goal-card,
+    .journey-panel,
+    .reflection-panel {
+        padding: 23px;
+    }
+
+    .panel::before,
+    .panel::after {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+
+    .interest-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .two-card-grid,
+    .goal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-panel,
+    .reflection-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-symbol,
+    .reflection-icon {
+        width: 85px;
+        height: 85px;
+        font-size: 2.3rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        text-align: center;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* ACCESSIBILITY: turns off animations for visitors who set their device to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    body::before {
+        animation: none;
+    }
+}

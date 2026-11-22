@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lili | Photo Exhibition &amp; Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+  <input type="checkbox" id="darkroom-switch" class="theme-checkbox">
+
+  <div class="gallery-wrapper">
+    <header>
+      <div class="header-inner">
+        <div class="header-top-bar">
+          <div class="header-top-left">
+            <a href="../../index.html" class="home-btn">Back to Home</a>
+            <span class="gallery-tag">EXHIBITION NO. 01 // BSCS 2026</span>
+          </div>
+          <label for="darkroom-switch" class="darkroom-toggle">
+            <span class="light-label">Switch to Darkroom</span>
+            <span class="dark-label">Switch to Gallery Light</span>
+          </label>
+        </div>
+
+        <div class="header-title-row">
+          <h1>Lian Lloyd Javier</h1>
+          <p class="intro-text">
+            Aspiring Software and ML Engineer, Photographer, Gymrat, and Caffeine addict.
+            Welcome to my personal exhibition documenting my first year in Computer Science at Bicol University and the frames I capture along the way.
+          </p>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#hello">01. Sup</a></li>
+            <li><a href="#gallery">02. Gallery</a></li>
+            <li><a href="#about">03. About Me</a></li>
+            <li><a href="#background">04. Background</a></li>
+            <li><a href="#path">05. My Path</a></li>
+            <li><a href="#favorites">06. Favorites &amp; Skills</a></li>
+            <li><a href="#goals">07. Goals</a></li>
+            <li><a href="#reflection">08. Reflection</a></li>
+            <li><a href="#letter">09. To read this one day</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- SECTION 1: SUP -->
+       <!-- little introduction of self -->
+      <section id="hello">
+        <div class="section-heading">
+          <span class="room-index">ROOM 01</span>
+          <h2>Sup</h2>
+        </div>
+
+        <div class="section-body">
+          <div class="profile-layout">
+            <div class="profile-mat">
+              <img src="images/profile.jpg" alt="Profile Picture of Lian Lloyd Javier in 1x1 aspect ratio" width="210">
+              <span class="frame-label">PRINT 00 // ARTIST PORTRAIT</span>
+            </div>
+
+            <div class="profile-details">
+              <ul class="bio-specs">
+                <li><strong>Preferred Name:</strong> Li, Lian, Lars</li>
+                <li><strong>Program:</strong> Bachelor of Science in Computer Science (BSCS)</li>
+                <li><strong>Year Level:</strong> 1st Year (Bicol University)</li>
+              </ul>
+              <p class="artist-statement">
+                I am a photography addict that got into CS cause I decided computer engineering was too expensive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PHOTO GALLERY -->
+       <!-- photo dump with link to personal photography portfolio -->
+      <section id="gallery">
+        <div class="section-heading">
+          <span class="room-index">ROOM 02</span>
+          <h2>Frame Highlight</h2>
+          <p class="section-note">Hover over any print to inspect the frame, or click a print to open it in the viewing room.</p>
+        </div>
+
+        <div class="section-body">
+          <div class="exhibition-grid">
+            <figure class="photo-print wide-print">
+              <a href="#lightbox-1" class="print-link">
+                <div class="mat-window">
+                  <img src="images/PHOTO1.jpg" alt="Tabaco City, Albay. Canon 1500D, 50mm F1.8 lens">
+                  <span class="inspect-badge">Inspect Print 01</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">PRINT 01</span>
+                Tabaco City, Albay. Canon 1500D, 50mm F1.8 lens. Credit: Lian Lloyd Javier
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print portrait-print">
+              <a href="#lightbox-2" class="print-link">
+                <div class="mat-window">
+                  <img src="images/PHOTO2.jpg" alt="Tabaco City, Albay. Canon 1500D, 10-22mm F3.5-4.5 lens">
+                  <span class="inspect-badge">Inspect Print 02</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">PRINT 02</span>
+                Tabaco City, Albay. Canon 1500D, 10-22mm F3.5-4.5 lens. Credit: Lian Lloyd Javier
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print portrait-print">
+              <a href="#lightbox-3" class="print-link">
+                <div class="mat-window">
+                  <img src="images/PHOTO3.jpg" alt="Saint Joseph's Oratory of Mount Royal, Montreal, Quebec. Canon 1500D, 50mm F1.8 lens">
+                  <span class="inspect-badge">Inspect Print 03</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">PRINT 03</span>
+                Saint Joseph's Oratory of Mount Royal, Montreal, Quebec. Canon 1500D, 50mm F1.8 lens. Credit: Lian Lloyd Javier
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="portfolio-callout">
+            <div class="portfolio-callout-text">
+              <span class="frame-label">FULL ARCHIVE // EXTERNAL EXHIBITION</span>
+              <h3>Complete Photography Portfolio</h3>
+              <p>Check out more here! I have more cool photos in my portfolio!</p>
+            </div>
+            <a href="https://larsito.pixieset.com/liliportfolio/" target="_blank" rel="noopener noreferrer" class="portfolio-btn">
+              Visit Portfolio &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: ABOUT ME -->
+       <!-- explanation of self like hobbies, sched, and a little deeper dive -->
+      <section id="about">
+        <div class="section-heading">
+          <span class="room-index">ROOM 03</span>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="section-body">
+          <p>
+            I'm Lian, photographer, your local gym rat, Batman wannabe and the one who takes up the most hours on Spotify.
+          </p>
+
+          <h3>My Mindset</h3>
+          <p>
+            One thing to know, I'm an obsession freak egoist. Once I decide I want something, I get it no matter what, and that applies a lot to my education. If I fail an exam for the first time, I'll grind every day for weeks just to get better results, especially since I'm way too much of a perfectionist. I'm so spiteful and prideful that I find genuine joy in proving people wrong. I just love the feeling of beating the odds, being challenged, and having the world against me, and my obsession contributes a lot to it.
+          </p>
+
+          <h3>A Quote I Live By</h3>
+          <blockquote class="fav-quote">
+            <p>"I am afraid. Not of life, or death, or nothingness, but of wasting it as if I had never been."</p>
+            <p class="quote-author">- Daniel Keyes, <cite>Flowers for Algernon</cite></p>
+          </blockquote>
+
+          <div class="two-col-notes">
+            <div>
+              <h3>Interests &amp; Hobbies</h3>
+              <ul class="catalog-list">
+                <li>Photography</li>
+                <li>Combat Sports / Gym</li>
+                <li>Listening to music</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>My Typical Day</h3>
+              <ul class="catalog-list">
+                <li>Start the morning slowly by staying in bed for 30 minutes to an hour, adjusting my wake-up time just so I never have to rush.</li>
+                <li>Head to class, study, and hang out with friends.</li>
+                <li>Grab afternoon coffee and lunch, then take a walk around the area with earphones on.</li>
+                <li>Treat myself to a good dinner for a day well spent.</li>
+                <li>Put in more study hours at night and sneak in a workout despite the workload.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>How I Got Into My Hobbies</h3>
+          <div class="hobby-story-list">
+            <div class="hobby-story-row">
+              <p>
+                <strong>Photography:</strong> Ever since the 10th grade, photography has been my whole life. I didn't even take good photos on a phone before picking up that DSLR camera for a school project. Photography really was a way for me to express how I see the world, a story to be told, the smallest details, there is so much a camera can capture. The calloused hands of a person fighting for survival in the city, the eyes of a person in love, the beautiful scenery of a moment's pass. Though with this, the hobby also led to a big struggle. It fed into my perfectionism, I was never really satisfied with my photos, always wanting to take better and better ones to post. It got so bad to the point I actually had a creative block for months and all I took was generic mediocre photos at the time. But, there are upsides, everyone knows me for the camera, I've gotten paid, been recognized, and this hobby is still one of my biggest enjoyments in life. Whenever I just go out on the street, especially with friends, I get reminded how much I like doing things FOR MYSELF and myself only.
+              </p>
+
+              <figure class="photo-print hobby-story-print">
+                <a href="#lightbox-camera" class="print-link">
+                  <div class="mat-window square-window">
+                    <img src="images/CAMERAPIC.jpg" alt="Out shooting">
+                    <span class="inspect-badge">Inspect</span>
+                  </div>
+                </a>
+                <figcaption>
+                  <span class="frame-number">HOBBY 01</span>
+                  Out shooting
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="hobby-story-row">
+              <p>
+                <strong>Gym:</strong> I really got into the gym because of bullying, everyone saying I was fat, from family to friends making fun of my size, and I guess a lot of "failures". After being told by someone to change, I decided to step into that nearby gym for the first time and honestly I was scared. Lifting and dieting, on the diet part, I already made a mistake of lowering my calories so much that I was practically malnourished after 3 months of eating the same calories a child would. It was dark times back then and with the familiar saying "pain in the body mutes out pain in the mind" I just kept going. As time went on, I started to genuinely enjoy it, started getting compliments, started appreciating myself more, getting to know people from the community better, even having people ask what I did up to that point, not knowing everything was fueled by self-hatred. Now, the gym is something I love putting into my daily routine and it makes me wonder, how many other people feel the same way? It makes me want to help others going through a similar experience. And I have the gym, the community, and the days fulfilled in it to thank for it all.
+              </p>
+
+              <figure class="photo-print hobby-story-print">
+                <a href="#lightbox-gym" class="print-link">
+                  <div class="mat-window portrait-window">
+                    <img src="images/GYMPIC.jpg" alt="Gym pic">
+                    <span class="inspect-badge">Inspect</span>
+                  </div>
+                </a>
+                <figcaption>
+                  <span class="frame-number">HOBBY 02</span>
+                  Gym pic
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="hobby-story-row">
+              <p>
+                <strong>Music:</strong> It's simple, listening to music is my way of shutting out the loud world, sometimes surroundings get too overwhelming, stimulating, and it just comes at the wrong time. Having earphones ready at all times helps with it. Especially when the ones making all the noise is your own mind. It really helps cancel out anything your brain tries to register as noise as it's already occupied with the music. Plus, I like singing so I have a genuine appreciation for artists and their songs.
+              </p>
+
+              <figure class="photo-print hobby-story-print">
+                <a href="#lightbox-music" class="print-link">
+                  <div class="mat-window playlist-window">
+                    <img src="images/MUSICPLAYLIST.jpg" alt="On Repeat playlist">
+                    <span class="inspect-badge">Inspect</span>
+                  </div>
+                </a>
+                <figcaption>
+                  <span class="frame-number">HOBBY 03</span>
+                  On Repeat playlist
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <h3>My Class Schedule</h3>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Day</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CS 101: Introduction to Computing</td>
+                  <td>Monday</td>
+                  <td>09:00 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                  <td>CS 102: Computer Programming 1</td>
+                  <td>Monday, Wednesday</td>
+                  <td>01:00 PM - 04:00 PM</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Tuesday</td>
+                  <td>01:00 PM - 03:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Math 101: Mathematical Analysis 1</td>
+                  <td>Tuesday, Thursday</td>
+                  <td>09:00 AM - 10:30 AM</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Friday</td>
+                  <td>10:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                  <td>PATHFit 3: Menu of Dance, Sports,<br> Martial Arts, Exercise, Outdoor and <br>Adventure Activities</td>
+                  <td>Wednesday</td>
+                  <td>05:00 PM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Phys 1: Physics for Computing</td>
+                  <td>Tuesday, Thursday</td>
+                  <td>10:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                  <td>GEC 16: Art Appreciation</td>
+                  <td>Thursday</td>
+                  <td>01:30 PM - 04:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: BACKGROUND -->
+       <!-- a little more into my works and related studies -->
+      <section id="background">
+        <div class="section-heading">
+          <span class="room-index">ROOM 04</span>
+          <h2>Background</h2>
+        </div>
+
+        <div class="section-body">
+          <h3>Education</h3>
+          <ul class="catalog-list">
+            <li><strong>Elementary to Junior High School:</strong> Catholic Central School of Tabaco</li>
+            <li><strong>Senior High School:</strong> University of Santo Tomas-Legazpi</li>
+            <li><strong>1st Year College (Prior to Transferring):</strong> University of Santo Tomas-Legazpi</li>
+            <li><strong>Currently:</strong> Bicol University</li>
+          </ul>
+
+          <div class="edu-grid">
+            <figure class="photo-print">
+              <a href="#lightbox-grad-1" class="print-link">
+                <div class="mat-window">
+                  <img src="images/GRADAWARD.jpg" alt="Senior High School diploma, medals, and honor certificates">
+                  <span class="inspect-badge">Inspect Grad 01</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">EDU 01</span>
+                Senior High School diploma, medals, and honor certificates.
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print">
+              <a href="#lightbox-grad-2" class="print-link">
+                <div class="mat-window">
+                  <img src="images/GROUPGRAD.jpg" alt="Senior High School graduation with classmates">
+                  <span class="inspect-badge">Inspect Grad 02</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">EDU 02</span>
+                Senior High School graduation with classmates.
+              </figcaption>
+            </figure>
+          </div>
+
+          <h3>Tech-Related Background</h3>
+          <div class="tech-grid">
+            <figure class="photo-print">
+              <a href="#lightbox-tech-1" class="print-link">
+                <div class="mat-window">
+                  <img src="images/AQUASEPIA.jpg" alt="Winning school sci-tech competition with our amphibious rescue and navigation robot, Aquasepia">
+                  <span class="inspect-badge">Inspect Tech 01</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">TECH 01</span>
+                Winning school sci-tech competition with our amphibious rescue and navigation robot: Aquasepia.
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print">
+              <a href="#lightbox-tech-2" class="print-link">
+                <div class="mat-window">
+                  <img src="images/LEARNINGPYTHON.jpg" alt="Learning Python during DICT work immersion">
+                  <span class="inspect-badge">Inspect Tech 02</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">TECH 02</span>
+                Learning Python during DICT work immersion.
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print">
+              <a href="#lightbox-tech-3" class="print-link">
+                <div class="mat-window">
+                  <img src="images/ICAPSAWARD.jpg" alt="Presenting our research paper, Development of a Portable Solar-Powered Atmospheric Water Generator (AWG), at ICAPS via Zoom, hosted by DLSU">
+                  <span class="inspect-badge">Inspect Tech 03</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">TECH 03</span>
+                Presenting our research paper, Development of a Portable Solar-Powered Atmospheric Water Generator (AWG), at ICAPS via Zoom, hosted by DLSU.
+              </figcaption>
+            </figure>
+
+            <figure class="photo-print">
+              <a href="#lightbox-tech-4" class="print-link">
+                <div class="mat-window">
+                  <img src="images/TIDEMANLARP.jpg" alt="Learning C and Computer Science fundamentals through Harvard's online course, CS50">
+                  <span class="inspect-badge">Inspect Tech 04</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">TECH 04</span>
+                Learning C and Computer Science fundamentals through Harvard's online course, CS50.
+              </figcaption>
+            </figure>
+          </div>
+
+          <h3>Organizations</h3>
+          <div class="org-layout">
+            <ul class="catalog-list">
+              <li><strong>Elementary to Junior High School:</strong> Music and Glee Club, Sci-Math Club</li>
+              <li><strong>Senior High School:</strong> The Vitruvian (Photojournalist)</li>
+              <li><strong>1st Year College (Prior to Transfer):</strong> The Aquinian Herald (Photojournalist)</li>
+              <li><strong>Bicol University:</strong> The Bicol Universitarian (Photojournalist)</li>
+            </ul>
+
+            <figure class="photo-print">
+              <a href="#lightbox-press" class="print-link">
+                <div class="mat-window">
+                  <img src="images/PRESSIDS.jpg" alt="Collection of my press IDs from different school publications over the years">
+                  <span class="inspect-badge">Inspect Press IDs</span>
+                </div>
+              </a>
+              <figcaption>
+                <span class="frame-number">ARCHIVE PRINT</span>
+                Press IDs collected over the years across student publications.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: MY PATH INTO COMPUTING -->
+       <!-- lore drop on how I got into CS -->
+      <section id="path">
+        <div class="section-heading">
+          <span class="room-index">ROOM 05</span>
+          <h2>My Path Into Computing</h2>
+        </div>
+
+        <div class="section-body">
+          <p>
+            I honestly didn't think I'd get into anything tech- or engineering-related. Growing up, I always envisioned myself going into healthcare as an optometrist so I could help people dealing with eye conditions similar to mine. That changed in senior high school when I met my best friend, Jem, he made a big impact on me, and I ended up enjoying math far more than I ever expected.
+          </p>
+          <p>
+            Jem, Anthony, and I all started out as Computer Engineering students, but rising tuition and expenses, combined with dissatisfaction at my previous school, pushed me to take the risk of shifting and transferring into Computer Science at Bicol University. Getting into the university on a second attempt, especially after failing BUCET the first time, was a long and difficult process, but it paid off. Even if BSCS wasn't my original childhood plan, I'm happier than ever studying in a much stronger environment and in a program closely aligned with where I started.
+          </p>
+
+          <figure class="photo-print path-print">
+            <a href="#lightbox-path" class="print-link">
+              <div class="mat-window">
+                <img src="images/LJA.jpg" alt="A picture of me, Jem, and Anthony">
+                <span class="inspect-badge">Inspect Print</span>
+              </div>
+            </a>
+            <figcaption>
+              <span class="frame-number">PATH 01</span>
+              A picture of me, Jem, and Anthony
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- SECTION 6: FAVORITES AND SKILLS -->
+       <!-- my personal likes and interests hehe -->
+      <section id="favorites">
+        <div class="section-heading">
+          <span class="room-index">ROOM 06</span>
+          <h2>Favorites &amp; Skills</h2>
+        </div>
+
+        <div class="section-body">
+          <p>
+            One website I enjoy visiting is
+            <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+            because I can watch all my favorite videos, especially Minecraft videos.
+          </p>
+
+          <h3>Tools, Favorites &amp; Skills I Am Building</h3>
+          <ul class="catalog-list">
+            <li><strong>Photography Gear &amp; Workflow:</strong> Shooting on a Sony A6700 and editing in Lightroom Mobile on a broken phone.</li>
+            <li><strong>Programming &amp; Tech Stack:</strong> Versed in Java and building competence in C, with plans to learn ReactJS, Rust, and C++ for a solid full-stack lineup.</li>
+            <li><strong>Music, Books &amp; Games:</strong> Listening to Grentperez and Rob Deniel, reading <em>Flowers for Algernon</em>, and playing Red Dead Redemption 2 (RDR2).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 7: GOALS -->
+      <!-- my personal goals and future learnings, im serious about the farm part. -->
+      <section id="goals">
+        <div class="section-heading">
+          <span class="room-index">ROOM 07</span>
+          <h2>Goals</h2>
+        </div>
+
+        <div class="section-body">
+          <p>
+            I hope to learn a lot during my stay at Bicol University, especially becoming industry-ready in Artificial Intelligence, Machine Learning, and Full Stack Development. I want to land a secure job and be part of the few that say, "Computer science is the future, and I am part of it."
+          </p>
+          <h3>My Top 3 Goals</h3>
+          <ol class="ranked-list">
+            <li>Land a job at one of the top tech companies</li>
+            <li>Become a fullstack developer</li>
+            <li>Live on a farm</li>
+          </ol>
+          <p>
+            Over the next few years, I hope to become a more well-rounded individual across the fields I am into, learning more programming languages, strengthening my grasp of algorithms, and getting better with creatives.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 8: REFLECTION -->
+       <!-- self reflection on the process of making this website -->
+      <section id="reflection">
+        <div class="section-heading">
+          <span class="room-index">ROOM 08</span>
+          <h2>Reflection</h2>
+        </div>
+
+        <div class="section-body">
+          <p>
+            My first version of this site was rough. It was basically just raw HTML tags stacked down the page with default fonts and photos that didn't fit their containers properly. Rebuilding it into a gallery layout forced me to actually learn how CSS Grid and Flexbox behave when you throw different screen sizes and photo orientations at them. Honestly, the coolest part was figuring out that I didn't need JavaScript for the interactive stuff. Wiring up the Darkroom switch with a hidden checkbox and getting the photo lightboxes to work with pure CSS made the whole page feel way cleaner.
+          </p>
+          <p>
+            I also caught myself obsessing over tiny details nobody else will probably notice, like adjusting frame padding and fixing how vertical shots like my Mayon and gym photos cropped inside their boxes. That's just how I operate though.
+          </p>
+          <p>
+            This project is a little personal to me since a lot of it is really personal. Some stuff here isn't really obvious nor have I told a lot of people about. So the making of this project was really an effort since it is really tied to me as a person.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 9: LETTER TO FUTURE SELF -->
+       <!-- A little something for myself to read a few years in the future -->
+      <section id="letter">
+        <div class="section-heading">
+          <span class="room-index">ROOM 09</span>
+          <h2 class="letter-heading">Keep safe, don't you dare go hollow.</h2>
+        </div>
+
+        <div class="section-body">
+          <div class="letter-sheet">
+            <p>
+              Hey there big man, hope you're still there. I'd be glad if you still are. I don't know a lot what to say to you but I'll build up to it as I'm writing. I know, right now, life hasn't been the kindest, I don't expect it to get lighter as well. We'll make it through all this right? So many responsibilities so many voices so much pressure. Being the perfect son, a good friend, and a decent human being, the weight is heavy.. I know. Lets look at the future though. Here's a list of hopes I wish you'd get by then: I hope you wouldn't lose that smile, I hope who ever is speaking in your mind speaks kinder words, I hope your heart still has the strength to give others comfort, I hope your arms still give out the warmest hugs, I hope your mouth still speak words of reassurance and wisdom, I hope your legs can still carry all that weigh you down, I hope mom is finally proud of you, I hope you finally see your own spark again, I hope you still have your friends, I hope you never have to lie to your parents about being out with your friends anymore when you're really just out there by yourself, I hope you still don't spend your early mornings staring at the ceiling for hours, I hope you spend your days with the girl of your dreams, I hope you're happy and I hope you're proud of yourself. So many more but let's move on. Look buddy, just keep being YOU okay, push forward, get yourself together. Remember what Sister Calderón said, "Take a gamble that love exists, and do a loving act", and maybe that loving act is being gentler on yourself.
+            </p>
+            <p>
+              Future self, I hope you forgive this kiddo version of you, he is sorry for all the turmoil he caused. He was just tired and trying to cope the only way he knew how. He's trying his best every day, even when he has nothing left to give and comes back to his self destructive habits. I REALLY REALLY do hope you don't lose passion for gaming as well. Keep hold of the things that genuinely make you feel alive, and stop hiding behind masks, don't lie to yourself and the others close to you no more. Be the man this version of yourself yearns to be.
+            </p>
+            <p>
+              And if things still aren't what they're supposed to be? That's okay. You're going to be okay. You got this big guy! You've done this alone before, you always have. I just hope you aren't alone next time. Trust in yourself to do the right thing and everything will fall in to place.
+            </p>
+            <p>
+              Before I wrap this up, thank you for still being here. Seriously. Thank you for not giving up when things got heavy, and for carrying both of us to wherever you are right now. You don't have to have everything figured out for me to be proud of you, just the fact that you're reading this means you made it through. Take care of yourself, big guy. Keep your heart soft, let people in, and give yourself credit for how far you've come. I'm always rooting for you. Keep safe, friend, Don't you dare go hollow.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10: SOURCES -->
+       <!-- self credits hehe -->
+      <section id="sources">
+        <div class="section-heading">
+          <span class="room-index">ARCHIVE</span>
+          <h2>Sources</h2>
+        </div>
+
+        <div class="section-body">
+          <ul class="catalog-list">
+            <li>All personal photographs taken by Lian Lloyd Javier.</li>
+            <li>Layout and Content: Lian Lloyd Javier.</li>
+            <li>Photography portfolio website used: pixieset.com</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        <a href="../../index.html" class="back-home home-footer-btn">Back to Home</a>
+        <a href="#top" class="back-home">Return to Gallery Entrance</a>
+      </p>
+      <p>Made by Lian Lloyd Javier for CS 101 in 2026, Bicol University.</p>
+    </footer>
+
+    <!-- LIGHTBOX MODALS -->
+    <div id="lightbox-1" class="lightbox">
+      <a href="#gallery" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/PHOTO1.jpg" alt="Tabaco City, Albay. Canon 1500D, 50mm F1.8 lens">
+        <div class="lightbox-caption">
+          <span>PRINT 01 // Tabaco City, Albay. Canon 1500D, 50mm F1.8 lens. Credit: Lian Lloyd Javier</span>
+          <a href="#gallery" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-2" class="lightbox">
+      <a href="#gallery" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/PHOTO2.jpg" alt="Tabaco City, Albay. Canon 1500D, 10-22mm F3.5-4.5 lens">
+        <div class="lightbox-caption">
+          <span>PRINT 02 // Tabaco City, Albay. Canon 1500D, 10-22mm F3.5-4.5 lens. Credit: Lian Lloyd Javier</span>
+          <a href="#gallery" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-3" class="lightbox">
+      <a href="#gallery" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/PHOTO3.jpg" alt="Saint Joseph's Oratory of Mount Royal, Montreal, Quebec. Canon 1500D, 50mm F1.8 lens">
+        <div class="lightbox-caption">
+          <span>PRINT 03 // Saint Joseph's Oratory of Mount Royal, Montreal, Quebec. Canon 1500D, 50mm F1.8 lens. Credit: Lian Lloyd Javier</span>
+          <a href="#gallery" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-camera" class="lightbox">
+      <a href="#about" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/CAMERAPIC.jpg" alt="Out shooting">
+        <div class="lightbox-caption">
+          <span>HOBBY 01 // Out shooting</span>
+          <a href="#about" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-gym" class="lightbox">
+      <a href="#about" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/GYMPIC.jpg" alt="Gym pic">
+        <div class="lightbox-caption">
+          <span>HOBBY 02 // Gym pic</span>
+          <a href="#about" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-music" class="lightbox">
+      <a href="#about" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/MUSICPLAYLIST.jpg" alt="On Repeat playlist">
+        <div class="lightbox-caption">
+          <span>HOBBY 03 // On Repeat playlist</span>
+          <a href="#about" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-grad-1" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/GRADAWARD.jpg" alt="Senior High School diploma, medals, and honor certificates">
+        <div class="lightbox-caption">
+          <span>EDU 01 // Senior High School diploma, medals, and honor certificates</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-grad-2" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/GROUPGRAD.jpg" alt="Senior High School graduation with classmates">
+        <div class="lightbox-caption">
+          <span>EDU 02 // Senior High School graduation with classmates</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-tech-1" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/AQUASEPIA.jpg" alt="Winning school sci-tech competition with our amphibious rescue and navigation robot, Aquasepia">
+        <div class="lightbox-caption">
+          <span>TECH 01 // Winning school sci-tech competition with Aquasepia</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-tech-2" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/LEARNINGPYTHON.jpg" alt="Learning Python during DICT work immersion">
+        <div class="lightbox-caption">
+          <span>TECH 02 // Learning Python during DICT work immersion</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-tech-3" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/ICAPSAWARD.jpg" alt="Presenting our research paper, Development of a Portable Solar-Powered Atmospheric Water Generator (AWG), at ICAPS via Zoom, hosted by DLSU">
+        <div class="lightbox-caption">
+          <span>TECH 03 // Presenting Portable Solar-Powered AWG research at ICAPS (DLSU)</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-tech-4" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/TIDEMANLARP.jpg" alt="Learning C and Computer Science fundamentals through Harvard's online course, CS50">
+        <div class="lightbox-caption">
+          <span>TECH 04 // Learning C and CS fundamentals through Harvard's CS50</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-press" class="lightbox">
+      <a href="#background" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/PRESSIDS.jpg" alt="Collection of my press IDs from different school publications over the years">
+        <div class="lightbox-caption">
+          <span>ARCHIVE PRINT // Press IDs over the years across student publications</span>
+          <a href="#background" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-path" class="lightbox">
+      <a href="#path" class="lightbox-backdrop" aria-label="Close lightbox"></a>
+      <div class="lightbox-frame">
+        <img src="images/LJA.jpg" alt="A picture of me, Jem, and Anthony">
+        <div class="lightbox-caption">
+          <span>PATH 01 // A picture of me, Jem, and Anthony</span>
+          <a href="#path" class="lightbox-close">Close [X]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

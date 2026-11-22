@@ -1,0 +1,425 @@
+/*
+=====================================================================
+CS 101 ACTIVITY: BUILD YOUR OWN "ABOUT ME" WEB PAGE
+File 2 of 2: style.css (the LOOK and LAYOUT of my page)
+Customized/created by: Krisha Lauren B. Rafallo
+=====================================================================
+
+This stylesheet gives my About Me webpage a soft pink aesthetic.
+It styles the overall look of the website including the 
+text, headings, sections, navigation, table, images,
+and links while keeping the page neat and easy to read.
+*/
+
+/* ---------------------------------------------------------------
+STEP 1: STYLE THE WHOLE PAGE
+The body controls the font, text color, background, and spacing.
+--------------------------------------------------------------- */
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4a3540;
+    background-color: #f8c5d8;
+    margin: 0;
+    overflow-x: hidden;
+
+    /* Pink background with sparkling stars */
+    background-image:
+        radial-gradient(circle, #ffffff 1.5px, transparent 2px),
+        radial-gradient(circle, #ffffff 2px, transparent 2.5px),
+        radial-gradient(circle, #fff 1px, transparent 1.5px),
+        radial-gradient(circle, #ffffff 2.5px, transparent 3px),
+        radial-gradient(circle, #ffffff 1px, transparent 1.5px),
+        radial-gradient(circle, #ffffff 1.5px, transparent 2px);
+
+    background-size:
+        35px 35px,
+        55px 55px,
+        25px 25px,
+        75px 75px,
+        45px 45px,
+        100px 100px;
+
+    background-position:
+        0 0,
+        15px 20px,
+        10px 30px,
+        35px 10px,
+        20px 45px,
+        50px 60px;
+
+    background-attachment: fixed;
+}
+
+/* Make images responsive on different screen sizes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------------------------------------------------------------
+STEP 2: STYLE THE HEADINGS AND TEXT
+Pink headings match the theme of my personal webpage.
+--------------------------------------------------------------- */
+
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #b83e70;
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid #f2c6d8;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #c45483;
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+
+h4 {
+  color: #b83e70;
+  font-size: 1.1rem;
+}
+
+h5 {
+  color: #b83e70;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* The header introduces me and contains my navigation menu. */
+header {
+  background-color: #d96c99;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header p {
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------------
+STEP 3: THE BOX MODEL
+Sections have padding, margins, borders, and rounded corners.
+--------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 900px;
+  border: 1px solid #f2c6d8;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(190, 90, 130, 0.08);
+}
+
+main {
+  padding: 10px 15px;
+}
+
+header,
+footer {
+  padding: 25px 20px;
+}
+
+footer {
+  background-color: #d96c99;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Style the personal information list. */
+.personal-info {
+  background-color: #fff0f5;
+  padding: 20px 20px 20px 45px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Style the grade boxes in the achievements section. */
+.grade {
+  background-color: #fff7fa;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-left: 5px solid #e88eaf;
+  border-radius: 8px;
+}
+
+.grade h5 {
+  margin-top: 0;
+}
+
+/* ---------------------------------------------------------------
+STEP 4: FLEXBOX
+Flexbox arranges the navigation links horizontally.
+The links can wrap onto another line on smaller screens.
+--------------------------------------------------------------- */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+nav li {
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  color: #a83262;
+  background-color: #ffffff;
+  padding: 9px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #a83262;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------
+STEP 5: STYLE THE CLASS SCHEDULE TABLE
+The table uses borders, padding, and alternating row colors.
+--------------------------------------------------------------- */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  margin: 20px 0;
+  background-color: #ffffff;
+}
+
+th,
+td {
+  border: 1px solid #e6a8c4;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background-color: #d96c99;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #fff0f5;
+}
+
+/* ---------------------------------------------------------------
+STEP 6: STYLE IMAGES AND LINKS
+Images are centered and responsive.
+Links change color when the mouse moves over them.
+--------------------------------------------------------------- */
+
+.center-image {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border: 4px solid #ffe0eb;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(190, 90, 130, 0.15);
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+a {
+  color: #c2185b;
+}
+
+a:hover {
+  color: #8e1745;
+}
+
+a:focus-visible {
+  outline: 2px solid #a83262;
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------
+ADDITIONAL STYLES: FAMILY AND FRIENDS
+Each person's information is placed in a separate card so that 
+it is organized and equally divided. 
+--------------------------------------------------------------- */
+
+.person-card {
+  background-color: #fff9fb;
+  padding: 18px;
+  margin: 20px 0;
+  border: 1px solid #f2c6d8;
+  border-radius: 12px;
+}
+
+/* Grid layout for family and friends */
+#myfamily-friends {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#myfamily-friends h2 {
+  grid-column: 1 / -1;
+}
+
+#myfamily-friends .person-card {
+  margin: 0;
+}
+
+
+.person-card h3 {
+  margin-top: 0;
+}
+
+/* Style the favorite Bible verse. */
+blockquote {
+  background-color: #fff0f5;
+  border-left: 5px solid #d96c99;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-style: italic;
+  color: #8e1745;
+}
+
+/* ---------------------------------------------------------------
+ADDITIONAL STYLES: LISTS
+Lists have comfortable spacing and readable text.
+--------------------------------------------------------------- */
+
+section ul,
+section ol {
+  padding-left: 25px;
+}
+
+section li {
+  margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------------------
+RESPONSIVE DESIGN
+These rules make the webpage easier to view on phones.
+--------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 18px;
+    margin: 15px auto;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .person-card {
+    padding: 12px;
+  }
+  /* Additional mobile responsiveness */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+/* Style the Back to Homepage link */
+.back-home {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style the Back to Homepage link inside the footer */
+footer .back-home a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .back-home a:hover {
+    color: #ffe0eb;
+}
+
+/* ---------------------------------------------------------------
+I used a pink color scheme because it is my favorite color and I
+want to make it a color of my website because it also represents me.
+Flexbox keeps the navigation organized, while responsive image
+and table styles help the webpage display properly on small screens.
+Thank you. Hoping that you'll like my webpage. ♡
+--------------------------------------------------------------- */

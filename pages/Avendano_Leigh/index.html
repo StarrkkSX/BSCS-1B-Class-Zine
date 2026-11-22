@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leigh Avendaño | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== THEME SWITCH (hidden radios, controlled by header labels) ===== -->
+  <input class="theme-radio" type="radio" name="theme" id="t-cherry" checked>
+  <input class="theme-radio" type="radio" name="theme" id="t-orchid">
+  <input class="theme-radio" type="radio" name="theme" id="t-lily">
+
+  <!-- ===== HEADER & NAV ===== -->
+  <header id="home">
+    <a class="brand" href="../../index.html">Back to Home</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#path">Path</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ul>
+      <div class="themes" role="group" aria-label="Choose a theme">
+        <label for="t-orchid" class="swatch orchid">Orchid</label>
+        <label for="t-cherry" class="swatch cherry">Cherry Blossom</label>
+        <label for="t-lily" class="swatch lily">Lily</label>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ===== HERO / HELLO ===== -->
+    <section class="hero" id="hello">
+      <h1 class="hero-title" aria-label="Portfolio">PORTFOLIO</h1>
+
+      <div class="hero-grid">
+        <div class="hero-left">
+          <span class="hero-kicker">HELLO, I’M</span>
+          <h2 class="hero-name">LEIGH</h2>
+          <p class="hero-role">1ST YEAR COMPUTER SCIENCE<br>BICOL UNIVERSITY</p>
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="hero-bio">I am Leigh Franciele G. Avendaño. I prefer to be called “Leigh”. I am a 1st year student of the Computer Science program at Bicol University. I am somewhat introverted, I find comfort in music, and I am a shopaholic 💗</p>
+        </div>
+
+        <div class="hero-center">
+            <div class="hero-botanicals" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span>✦</span>
+                <span></span>
+                <span>✦</span>
+                <span></span>
+            </div>
+            <div class="profile-wrap">
+              <img class="profile profile-base" src="images/profile.png" alt="Leighs cutout portrait">
+              <img class="profile profile-hover" src="images/profile-hover.png" alt="Leighs second cutout portrait">
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <p class="script">Get To Know Me,<br>Bueño Edition</p>
+          <span class="hero-star" aria-hidden="true">✦</span>
+          <ul class="hero-traits">
+            <li>MAGANDA</li>
+            <li>PRETTY</li>
+            <li>MABAIT (PAG TULOG)</li>
+            <li>BEAUTIFUL</li>
+            <li>MAGAYON</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section class="panel" id="about">
+      <h2>About Me</h2>
+      <div class="cols">
+        <div>
+          <h3>Hobbies &amp; Interests</h3>
+          <ul class="tags">
+            <li>Gym</li><li>Walking</li><li>Videogames</li><li>Painting</li><li>Makeup</li>
+          </ul>
+        </div>
+        <div>
+          <h3>My Typical Day</h3>
+          <p>If I have somewhere to go or errands to run, I start my day by putting on makeup and getting ready. I drink my coffee or tea (unsweetened, always) sometime later in the day. When my head feels cluttered, I go for a walk, blast my music, or squeeze in a gym session. Once things slow down, I hop on a game and just play for a while. And of course, somewhere in between all of that, I’m doomscrolling.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PATH: my journey into computing ===== -->
+    <section class="split" id="path">
+      <div class="split-text">
+        <h2>My Journey into Computing</h2>
+        <p>Life’s randomness somehow landed me in Computer Science because of a spontaneous, on-the-spot decision. Since I had no prior experience or interest, my journey has been incredibly difficult. I’ve had many setbacks and failing grades, yet I’m still learning to love the course. With time, I hope to become genuinely interested and to learn not only for grades but also to build skills for a lifetime.</p>
+      </div>
+      <div class="split-art" role="img" aria-label="Decorative flower image that changes with the theme"></div>
+    </section>
+
+    <!-- ===== FAVORITES: Spotify playlist ===== -->
+    <section class="panel" id="favorites">
+        <h2>My Favorite Songs</h2>
+        <p>Press play, or <a href="https://open.spotify.com/playlist/0ZJsSl78fqEUu0msmioM4O?pi=rWj3Vu0DSh2xG" target="_blank" rel="noopener">open the playlist on Spotify</a>.</p>
+        <iframe class="spotify" title="Leigh's favorite songs on Spotify" src="https://open.spotify.com/embed/playlist/0ZJsSl78fqEUu0msmioM4O?pi=rWj3Vu0DSh2xG" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <!-- ===== GOALS ===== -->
+    <section id="goals">
+      <div class="goals-head">
+        <div>
+          <span class="section-kicker">FUTURE ROADMAP</span>
+          <h2>Goals</h2>
+        </div>
+        <p class="goals-sub">Milestones I am building toward throughout my Computer Science journey and beyond.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-tag">GAME DEV</span>
+          <p>Create my own game (possibly on Roblox)</p>
+        </li>
+        <li>
+          <span class="step-tag">SKILLSET</span>
+          <p>Master UI/UX design</p>
+        </li>
+        <li>
+          <span class="step-tag">CAREER</span>
+          <p>Discover my true passion and build a career around it</p>
+        </li>
+        <li>
+          <span class="step-tag">PERSONAL PROJECT</span>
+          <p>Build a creative passion project that reflects my identity and growth</p>
+        </li>
+        <li>
+          <span class="step-tag">MILESTONE</span>
+          <p>Graduate not just with a degree, but with a deeper purpose</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== CLASS SCHEDULE (day filter + table) ===== -->
+    <section class="panel" id="schedule">
+      <h2>Class Schedule</h2>
+
+      <div class="day-filter" role="group" aria-label="Filter schedule by day">
+        <input class="day-radio" type="radio" name="day" id="d-all" checked>
+        <label for="d-all" class="day-pill">All</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-mon">
+        <label for="d-mon" class="day-pill">Mon</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-tue">
+        <label for="d-tue" class="day-pill">Tue</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-wed">
+        <label for="d-wed" class="day-pill">Wed</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-thu">
+        <label for="d-thu" class="day-pill">Thu</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-fri">
+        <label for="d-fri" class="day-pill">Fri</label>
+
+        <input class="day-radio" type="radio" name="day" id="d-sat">
+        <label for="d-sat" class="day-pill">Sat</label>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Day</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-day="mon"><td>Introduction to Computing</td><td>Monday</td><td>9:00 AM – 12:00 PM</td></tr>
+              <tr data-day="mon"><td>Computer Programming 1</td><td>Monday</td><td>1:00 PM – 4:00 PM</td></tr>
+              <tr data-day="tue"><td>Mathematical Analysis</td><td>Tuesday</td><td>9:00 AM – 10:30 AM</td></tr>
+              <tr data-day="tue"><td>Physics for Computing</td><td>Tuesday</td><td>10:30 AM – 12:00 PM</td></tr>
+              <tr data-day="tue"><td>Computer Programming 1</td><td>Tuesday</td><td>1:00 PM – 3:00 PM</td></tr>
+              <tr data-day="wed"><td>PATHFit 1</td><td>Wednesday</td><td>7:00 AM – 9:00 AM</td></tr>
+              <tr data-day="wed"><td>Computer Programming 1</td><td>Wednesday</td><td>1:00 PM – 4:00 PM</td></tr>
+              <tr data-day="thu"><td>Mathematical Analysis</td><td>Thursday</td><td>9:00 AM – 10:30 AM</td></tr>
+              <tr data-day="thu"><td>Physics for Computing</td><td>Thursday</td><td>10:30 AM – 12:00 PM</td></tr>
+              <tr data-day="fri"><td>Mathematical Analysis</td><td>Friday</td><td>10:00 AM – 12:00 PM</td></tr>
+              <tr data-day="fri"><td>Understanding the Self</td><td>Friday</td><td>1:00 PM – 4:00 PM</td></tr>
+              <tr data-day="sat"><td>LTS (NSTP)</td><td>Saturday</td><td>1:00 PM – 4:00 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REFLECTION ===== -->
+    <section id="reflection">
+      <div class="reflection-card">
+        <div class="reflection-flower" aria-hidden="true"></div>
+        <span class="section-kicker">PERSONAL ESSAY</span>
+        <h2>Reflection</h2>
+        <span class="reflection-quote" aria-hidden="true">“</span>
+        <p class="wide">At first, I genuinely had no idea how to start this project. I had only planned to create a simple webpage with minimal effort. However, after seeing my classmates’ designs, I became interested in experimenting and creating the best design I could. I learned how to structure a page in HTML with sections, lists, tables, and embeds. In CSS, I learned to use an external stylesheet, variables for themes, flexbox and grid layouts, and hover effects and animations. I still need tutorials, but they keep teaching me something new.</p>
+        <div class="reflection-footer">
+          <span class="reflection-sig">Leigh Avendaño</span>
+          <span class="reflection-meta">1ST YEAR STUDENT · BS COMPUTER SCIENCE</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER: credits & sources ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <span class="section-kicker">PORTFOLIO ARCHIVE</span>
+          <p class="footer-name">Leigh Franciele G. Avendaño</p>
+        </div>
+        <a class="back-top" href="../../index.html">Back to Home ↑</a>
+      </div>
+
+      <div class="sources-block">
+        <h2>Sources &amp; Credits</h2>
+        <ol class="sources-list">
+            <li>Typography: <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts (Cormorant Garamond, Jost, Pinyon Script)</a></li>
+            <li>Music Embed: <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify Web Player</a></li>
+            <li>Cherry Blossom Background: (https://pin.it/7iCuuSLeu)</li>
+            <li>Cherry Blossom Accent Flower: (https://pin.it/7fYZr8k47)</li>
+            <li>Cherry Blossom PNG Cutout: (https://pin.it/26NrnwyHl)</li>
+            <li>Orchid Background: (https://pin.it/DuGuGVnnq)</li>
+            <li>Orchid Accent Flower: (Radyan Rinaldi Photography)</li>
+            <li>Orchid PNG Cutout: (https://pin.it/561oQ45pU)</li>
+            <li>Lily Background: (https://pin.it/3UTFZKjlQ)</li>
+            <li>Lily Accent Flower: (https://www.pinterest.com)</li>
+            <li>Lily PNG Cutout: (https://www.pinterest.com)</li>
+            <li>Layout Inspiration: (https://pin.it/3d8gWPw6m)</li>
+            <li>HTML &amp; CSS Reference: <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+            <li>Course Reference: Bicol University BSCS Curriculum</li>
+        </ol>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Leigh Franciele G. Avendaño</span>
+        <span>Built with pure HTML &amp; CSS</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

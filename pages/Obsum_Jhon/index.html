@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- This tag makes the page fit a phone screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jhon Arvy Miguel R. Obsum | My Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER: To put my name (the page's only h1), my one-sentence summary and the menu at the top.
+       Each menu link jumps to the section with the matching id (href="#About" goes to id="About"). -->
+  <header>
+    <!-- Link back to the class home page -->
+    <a class="back-home" href="../../index.html">Back to Home</a>
+
+    <h1>Jhon Arvy Miguel R. Obsum</h1>
+    <p class="sum-up">A person full of hope, but life has other plans.</p>
+
+    <nav>
+      <ul>
+        <li><a href="#About">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#path">My Path</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT ME: To put my photo next to my introduction. The about-flex div uses Flexbox for the
+         side-by-side layout, img shows the photo (alt is its text description), and figcaption holds the credit. -->
+    <section id="About">
+      <h2>About me</h2>
+
+      <div class="about-flex">
+        <figure>
+          <img src="images/profile.jpg" alt="Portrait of Jhon Arvy Miguel R. Obsum">
+          <figcaption>
+            <small>Photo credit: Bulan National High School</small>
+          </figcaption>
+        </figure>
+
+        <div class="about-text">
+          <p>
+            Hello! My name is <strong>Jhon Arvy Miguel R. Obsum</strong>, but you can call me
+            Arvy or Jam. I am a first-year BSCS student at Bicol University. I live by a personal saying:
+            "Those who give up never succeed." No matter what life throws at me, I will face it head-on, armored or naked.
+            I see tomorrow as a gift—another chance to learn, grow, and become better. I may not be perfect, but I would
+            rather face tomorrow bruised by yesterday's battles than surrender to a future I haven't even tried to reach.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS: To show my hobbies as picture cards. The hobby-grid div uses CSS Grid so the cards
+         sit in columns and wrap on small screens. -->
+    <section id="interests">
+      <h2>My Interests</h2>
+      <p>The things I love doing.</p>
+
+      <div class="hobby-grid">
+
+        <div class="hobby-card">
+          <img src="images/MEBILLIARDS.jpg" alt="Me playing billiards">
+          <h3>Billiards</h3>
+        </div>
+
+        <div class="hobby-card">
+          <img src="images/guitar.jpg" alt="Music">
+          <h3>Music</h3>
+        </div>
+
+        <div class="hobby-card">
+          <img src="images/valo.jpg" alt="Online Games">
+          <h3>Online Games</h3>
+        </div>
+
+        <div class="hobby-card">
+          <img src="images/HIMYM.jpg" alt="TV Sitcoms">
+          <h3>TV Sitcoms</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY PATH INTO COMPUTING: To explain in my own words why I chose Computer Science. -->
+    <section id="path">
+      <h2>My Path into Computing</h2>
+
+      <p>
+        I chose Computer Science because I grew up in a world full of fantasy on a screen. Even at an
+        early age, I was already playing Dota and all kinds of video games like GTA and CS:GO, and that
+        got me curious about how they are made.
+      </p>
+      <p>
+        That's why I chose Computer Science as my program, to satisfy that curiosity. So far, I'm enjoying
+        my chosen program and campus. I've made so many friends and experienced all kinds of emotions, along
+        with my ups and downs with the subjects, even though it's only been a few months. Still, I hope to
+        develop discipline first so I can effectively learn everything this course has to offer.
+      </p>
+    </section>
+
+    <!-- FAVORITES: To list my favorites in a table. thead holds the column titles (th), tbody holds the rows (tr),
+         and each td is one cell. The table-wrap div lets the table scroll sideways on a small phone. -->
+    <section id="favorites">
+      <h2>My Favorites</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>My Favorite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Games</td>
+              <td>Valorant, Rules of Survival, and League of Legends</td>
+            </tr>
+            <tr>
+              <td>Free time</td>
+              <td>Playing the guitar and singing</td>
+            </tr>
+            <tr>
+              <td>TV</td>
+              <td>American television sitcoms (HIMYM) and Cartoons</td>
+            </tr>
+            <tr>
+              <td>Sports</td>
+              <td>Billiards</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Artist cards: To show my favorite artists in a Grid. The img is inside an a link, so clicking
+           the round picture opens the artist's Spotify page in a new tab. -->
+      <h3 class="sub-heading">My Favorite Artists and Bands</h3>
+      <div class="artist-grid">
+
+        <div class="artist-card">
+          <a href="https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s" target="_blank" rel="noopener" title="Open Justin Bieber on Spotify">
+            <img src="images/Bieber.webp" alt="Justin Bieber Spotify page">
+          </a>
+          <h4>Justin Bieber</h4>
+          <p class="song">Favorite song:<br><em>Daisies</em></p>
+        </div>
+
+        <div class="artist-card">
+          <a href="https://open.spotify.com/artist/46gyXjRIvN1NL1eCB8GBxo" target="_blank" rel="noopener" title="Open All Time Low on Spotify">
+            <img src="images/Alltimelow.jpg" alt="All Time Low Spotify page">
+          </a>
+          <h4>All Time Low</h4>
+          <p class="song">Favorite song:<br><em>Dear Maria Count Me In</em></p>
+        </div>
+
+        <div class="artist-card">
+          <a href="https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY" target="_blank" rel="noopener" title="Open Green Day on Spotify">
+            <img src="images/Greenday.jpg" alt="Green Day Spotify page">
+          </a>
+          <h4>Green Day</h4>
+          <p class="song">Favorite song:<br><em>Last Night on Earth</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOALS: To list my goals in a numbered list (ol), where each li is one goal. -->
+    <section id="goals">
+      <h2>My Goals in Life</h2>
+
+      <ol>
+        <li>To be better, by having self-control and discipline.</li>
+        <li>To succeed in the things I embark on or plan to do.</li>
+        <li>To prove the ones who doubted me wrong.</li>
+        <li>To help those in need.</li>
+        <li>To be the reason my Dad can finally enjoy life without hardships, after everything he sacrificed to give me the life he never had.</li>
+      </ol>
+    </section>
+
+    <!-- REFLECTION: To write what I learned about myself and about web design. The CSS rule
+         #reflection p indents the first line of each paragraph. -->
+    <section id="reflection">
+      <h2>Reflection</h2>
+
+      <p>
+        During my time making this webpage of mine, I realized that I procrastinate so much
+        which results to me cramming my schoolworks and settling for what I can do for the short amount
+        I am left with. I hope I remove this attitude of mine and become productive and efficient
+        so that I can give it the best that I can show what I am really capable of.
+      </p>
+
+      <p>
+        I polished my webpage, or I hope so. I made a couple of adjustments and added new features, as well
+        as more information about me. Compared to my About Me activity, the page now has picture cards for my interests,
+        a table of my favorites instead of my class schedule, round artist photos that link to their Spotify pages,
+        and the big change is the colors, I changed it to my favorite colors so that it suits my preferences. It's
+        now a gray palette and it uses a serif font so the page looks cleaner and more me. I added some hover
+        effects and made the page fit a phone screen. While making it, I also learned Flexbox and Grid to make my webpage more organized.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER: To show my name and the sources of my pictures. Each link opens the page where I found the picture. -->
+  <footer>
+    <p>Made by Jhon Arvy Miguel R. Obsum for CS 101, Bicol University.</p>
+    <p class="sources-title">Image Sources</p>
+    <ul class="sources">
+      <li>Billiards photo: Inee Ginete.</li>
+      <li>Justin Bieber photo: <a href="https://www.vogue.co.uk/arts-and-lifestyle/article/justin-bieber-new-album-justice" target="_blank" rel="noopener">https://www.vogue.co.uk/arts-and-lifestyle/article/justin-bieber-new-album-justice</a></li>
+      <li>All Time Low photo: <a href="https://scenestr.com.au/music/everyones-talking-about-all-time-low-20251016" target="_blank" rel="noopener">https://scenestr.com.au/music/everyones-talking-about-all-time-low-20251016</a></li>
+      <li>Green Day photo: <a href="https://www.deezer.com/en/artist/52" target="_blank" rel="noopener">https://www.deezer.com/en/artist/52</a></li>
+      <li>Guitar photo: <a href="https://www.guitarworld.com/reviews/martin-gpce-inception-maple" target="_blank" rel="noopener">https://www.guitarworld.com/reviews/martin-gpce-inception-maple</a></li>
+      <li>Valorant picture: <a href="https://www.carry1st.com/blog/valorant-mobile-release-date-launch-guide" target="_blank" rel="noopener">https://www.carry1st.com/blog/valorant-mobile-release-date-launch-guide</a></li>
+      <li>HIMYM picture: <a href="https://wallpapercat.com/how-i-met-your-mother-wallpapers" target="_blank" rel="noopener">https://wallpapercat.com/how-i-met-your-mother-wallpapers</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

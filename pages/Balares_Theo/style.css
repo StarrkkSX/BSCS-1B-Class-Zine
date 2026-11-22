@@ -1,0 +1,123 @@
+/*
+=====================================================================
+  CS 101 ACTIVITY: BUILD YOUR OWN "ABOUT ME" WEB PAGE
+  File 2 of 2: style.css  (the LOOK and LAYOUT of your page)
+=====================================================================
+*/
+
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     line-height: 1.5;
+     color: #ffffff;
+     background-color: #000a44;
+   }
+
+
+h1 {
+     color: #ffffff(189, 100%, 50%);
+     font-size: 2.5rem;
+     text-align: center;
+   }
+
+   h2, h3 {
+     color: #5ce1e6;
+   }
+
+   header {
+     background-color: #b52a5d;
+     color: #ffd6e0;
+     text-align: center;
+   }
+
+ section {
+     background-color:  #0d1b5e;
+     padding: 20px;
+     margin: 20px auto;
+     max-width: 800px;
+     border: 1px solid #5ce1e6;
+     border-radius: 8px;
+   }
+
+   header, footer {
+     padding: 20px;
+   }
+
+
+ nav ul {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     list-style: none;
+     padding: 0;
+   }
+
+   nav a {
+     color: #ffe08a;
+     text-decoration: none;
+   }
+
+  header nav a:hover {
+  background-color: #fff;
+  color: #222;
+  border-color: #fff;
+}
+
+header nav a {
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+}
+
+header nav a:hover {
+  background-color: #222;   
+  color: #fff;              
+  border-color: #222;       
+}
+
+   nav a:hover {
+    color: #ffffff 
+   }
+
+table {
+     border-collapse: collapse;
+     width: 100%;
+   }
+
+   th, td {
+     border: 1px solid #3a4a9f;
+     padding: 10px;
+     text-align: left;
+   }
+
+   th {
+     background-color: #b52a5d93;
+     color: #ffffff;
+   }
+
+   tr:nth-child(even) {
+     background-color: rgba(92, 225, 230, 0.12)423;
+   }
+
+img {
+     border-radius: 0%;
+     max-width: 100%;
+   }
+
+   a {
+     color: #9ef0c5;
+   }
+
+   a:hover {
+     color:  #ffe08a;
+   }
+
+   footer {
+     text-align: center;
+     font-size: 0.9rem;
+     color: #ffd6e0
+   }
+   .artist { margin-bottom: 24px; } 
+   .artist img { border-radius: 8px; object-fit: cover; }
